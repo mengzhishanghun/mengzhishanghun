@@ -1,0 +1,37 @@
+Commercial License for Unreal Engine Plugins
+
+Copyright © 2025 mengzhishanghun. All Rights Reserved.
+
+1. Grant of License
+   The Licensor hereby grants the Licensee a non‑exclusive, non‑transferable,
+   royalty‑free right to use, integrate, and distribute the accompanying
+   Unreal Engine plugin (the “Plugin”) solely in packaged projects or
+   applications.
+
+2. Restrictions
+   • The Plugin and its source code may not be redistributed in source form.  
+   • The Licensee shall not resell, sublicense, or otherwise make the Plugin
+     available except as an embedded component of a compiled UE project.  
+   • Reverse‑engineering or de‑obfuscation of the Plugin is prohibited.
+
+3. Ownership
+   The Plugin is licensed, not sold.  All intellectual‑property rights remain
+   with the Licensor.
+
+4. Warranty Disclaimer
+   The Plugin is provided “AS IS” without warranty of any kind. The entire
+   risk as to the quality and performance of the Plugin is with the Licensee.
+
+5. Liability Limitation
+   In no event shall the Licensor be liable for any damages arising out of the
+   use or inability to use the Plugin, even if advised of the possibility of
+   such damages.
+
+6. Termination
+   Any breach of this License automatically terminates the rights granted
+   herein.  Upon termination, the Licensee must destroy all copies of the
+   Plugin in its possession.
+
+7. Governing Law
+   This License shall be governed by and construed in accordance with the laws
+   of the Licensor’s jurisdiction, without regard to its conflict‑of‑law rules.
