@@ -7,7 +7,7 @@ REG ADD "HKCU\SOFTWARE\Epic Games\Unreal Engine\Builds" /v "%name%" /t REG_SZ  /
 ```
 这个脚本会把当前路径下的虚幻源码添加到注册表，名字就是这个脚本的命名
 这样做的好处是统一源码的.uproject文件版本号
-![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/00-%E9%99%84%E4%BB%B6%E8%B5%84%E6%BA%90/%E5%9B%BE%E7%89%87/Pasted%20image%2020240710163255.png)
+![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/%E5%9B%BE%E7%89%87/Pasted%20image%2020240710163255.png)
 这样做的好处是可以防止每台电脑源码引擎的注册表名字不同导致的.uproject不同，而重新编译
 
 ## bat指令更新

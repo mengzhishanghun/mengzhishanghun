@@ -5,7 +5,7 @@
 # 怎么使用
 
 ## 启用插件
-![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/00-%E9%99%84%E4%BB%B6%E8%B5%84%E6%BA%90/%E5%9B%BE%E7%89%87/Pasted%20image%2020240927114953.png)
+![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/%E5%9B%BE%E7%89%87/Pasted%20image%2020240927114953.png)
 开启PixelStreaming插件即可
 ## 添加启动参数 
 
@@ -13,7 +13,7 @@
 
 ### 通过编辑器设置
 
-![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/00-%E9%99%84%E4%BB%B6%E8%B5%84%E6%BA%90/%E5%9B%BE%E7%89%87/Pasted%20image%2020240927113255.png)
+![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/%E5%9B%BE%E7%89%87/Pasted%20image%2020240927113255.png)
 
 编辑器偏好->播放->额外启动参数
 
@@ -33,7 +33,7 @@
 
 [EpicGamesExt/PixelStreamingInfrastructure: The official Pixel Streaming servers and frontend. (github.com)](https://github.com/EpicGamesExt/PixelStreamingInfrastructure/)
 
-![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/00-%E9%99%84%E4%BB%B6%E8%B5%84%E6%BA%90/%E5%9B%BE%E7%89%87/Pasted%20image%2020240927115200.png)
+![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/%E5%9B%BE%E7%89%87/Pasted%20image%2020240927115200.png)
 直接去发布页面
 
 找到与你引擎对应的版本下载即可，为什么要直接下发布版呢，因为这是以及编好可以直接使用的，要是直接下主干，或者分支版本，会提示缺少player.html文件
@@ -53,11 +53,11 @@
 执行指令即可
 > node cirrus.js
 
-![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/00-%E9%99%84%E4%BB%B6%E8%B5%84%E6%BA%90/%E5%9B%BE%E7%89%87/Pasted%20image%2020240927115932.png)
+![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/%E5%9B%BE%E7%89%87/Pasted%20image%2020240927115932.png)
 
 成功后是这样
 
-![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/00-%E9%99%84%E4%BB%B6%E8%B5%84%E6%BA%90/%E5%9B%BE%E7%89%87/Pasted%20image%2020240927120124.png)
+![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/%E5%9B%BE%E7%89%87/Pasted%20image%2020240927120124.png)
 
 # 在网页端访问
 

@@ -1,18 +1,18 @@
 # MOV播放
 原生UE播放器不支持MOV视频，需要安装两个插件
-![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/00-%E9%99%84%E4%BB%B6%E8%B5%84%E6%BA%90/%E5%9B%BE%E7%89%87/Pasted%20image%2020240722165101.png)
+![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/%E5%9B%BE%E7%89%87/Pasted%20image%2020240722165101.png)
 # 解决视频播放一帧残留
 ## 解决方案
-![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/00-%E9%99%84%E4%BB%B6%E8%B5%84%E6%BA%90/%E5%9B%BE%E7%89%87/Pasted%20image%2020240530161047.png)
+![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/%E5%9B%BE%E7%89%87/Pasted%20image%2020240530161047.png)
 如图，在MediaTexture中勾选AutoClear自动清理，并且将ClearColor的A通道设置为0
 
-![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/00-%E9%99%84%E4%BB%B6%E8%B5%84%E6%BA%90/%E5%9B%BE%E7%89%87/Pasted%20image%2020240530161442.png)
+![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/%E5%9B%BE%E7%89%87/Pasted%20image%2020240530161442.png)
 然后在创建的材质中，将材质混合模式修改为蒙板，将MediaTexture的A通道连接到蒙板输出即可
 
 ## 个人猜测
 以下代码截图为UE5.3非源码版截图
 
-![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/00-%E9%99%84%E4%BB%B6%E8%B5%84%E6%BA%90/%E5%9B%BE%E7%89%87/Pasted%20image%2020240530162139.png)
+![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/%E5%9B%BE%E7%89%87/Pasted%20image%2020240530162139.png)
 
 
 
@@ -27,9 +27,9 @@
 ## 重要更新
 
 刚发现这个办法还是无法完全消除残留，特地又研究了一下，发现在MediaTexture中有个UpdateTexture函数对蓝图开放，如图
-![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/00-%E9%99%84%E4%BB%B6%E8%B5%84%E6%BA%90/%E5%9B%BE%E7%89%87/Pasted%20image%2020240717150724.png)
+![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/%E5%9B%BE%E7%89%87/Pasted%20image%2020240717150724.png)
 所以要想完全消除残留还有一步，要在关闭或打开Media的时候给MediaTexture执行UpdateTexture函数，如图
-![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/00-%E9%99%84%E4%BB%B6%E8%B5%84%E6%BA%90/%E5%9B%BE%E7%89%87/Pasted%20image%2020240717150732.png)
+![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/%E5%9B%BE%E7%89%87/Pasted%20image%2020240717150732.png)
 开心o(*￣▽￣*)ブ完结散花！
 
 # 修复视频循环播放时不会从0开始的问题

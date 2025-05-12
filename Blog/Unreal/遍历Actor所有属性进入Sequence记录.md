@@ -15,7 +15,7 @@ void AMyDrivingReplayActor::AddInterp(const UStruct* ObjectClass)
 
 这里通过递归，将这个Actor内需要记录的结构体设置为了CPF_Interp，这个属性代表这个值能被LevelSequence记录，这个函数会遍历结构体内的所有属性，同样也设置为CPF_Interp
 
-![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/00-%E9%99%84%E4%BB%B6%E8%B5%84%E6%BA%90/%E5%9B%BE%E7%89%87/Pasted%20image%2020240905102943.png)
+![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/%E5%9B%BE%E7%89%87/Pasted%20image%2020240905102943.png)
 
 同时因为是在BeginPlay中才调用，他不会影响正常状态下得属性，只会在游戏开始时改变这部分属性
 

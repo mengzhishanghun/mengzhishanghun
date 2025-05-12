@@ -7,7 +7,7 @@
 但是函数声明为编辑器函数之后就不能在正常的蓝图被调用了，不知道是哪个版本做的更改，狗日的UE
 
 目前的解决办法是
-![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/00-%E9%99%84%E4%BB%B6%E8%B5%84%E6%BA%90/%E5%9B%BE%E7%89%87/Pasted%20image%2020240605175636.png)
+![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/%E5%9B%BE%E7%89%87/Pasted%20image%2020240605175636.png)
 创建EditorUtilityActor等类型的Editor类，只有这种类里才能调用EditorFunction
 
 如果后面有更好的办法会回来更新
