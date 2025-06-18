@@ -18,8 +18,8 @@ UTM会默认不会选择使用QXL,而且注意是这个QXL，选错打不开
 
 ---
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/PayCodes/WeChatPay.jpg" width="220"/>
-</p>
-> 如果我的文章对您有所帮助，欢迎赞赏支持，让我有更多动力持续分享 🙏   
-> 💼 业务合作 / Python 脚本 & UE 插件定制 → [mengzhishanghun@outlook.com](mailto:mengzhishanghun@outlook.com)
+![微信支付](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/PayCodes/WeChatPay.jpg)
+
+> 如果我的文章对您有所帮助，欢迎赞赏支持，让我有更多动力持续分享 🙏  
+> 💼 业务合作 / Python 脚本 & UE 插件定制  
+> 📧 [mengzhishanghun@outlook.com](mengzhishanghun@outlook.com)
