@@ -10,11 +10,11 @@
 
 ## 显卡选择
 UTM会默认不会选择使用QXL,而且注意是这个QXL，选错打不开
-![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/Pasted%20image%2020250617100218.png)
+![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/%E5%9B%BE%E7%89%87/Pasted%20image%2020250617100218.png)
 
 ## 虚拟系统盘设置
 系统创建的虚拟驱动器不是VirtIO接口，需要手动修改成这样，否则打不开
-![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/Pasted%20image%2020250617100257.png)
+![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/%E5%9B%BE%E7%89%87/Pasted%20image%2020250617100257.png)
 
 ---
 

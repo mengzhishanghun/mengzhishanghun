@@ -2,11 +2,11 @@
 
 通常情况下，当你新建一个蓝图继承自UObejct的时候，你会发现不仅不能获取到PlayerController
 
-![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/Pasted%20image%2020250615205900.png)
+![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/%E5%9B%BE%E7%89%87/Pasted%20image%2020250615205900.png)
 
 也不能够创建UI，否则会报错
 
-![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/Pasted%20image%2020250615205934.png)
+![](https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/Assets/%E5%9B%BE%E7%89%87/Pasted%20image%2020250615205934.png)
 
 造成这个的原因是因为父类里没有重写GetWorld这个函数，导致蓝图编译时拿不到上下文，引发报错。
 
