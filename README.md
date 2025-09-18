@@ -18,10 +18,9 @@
 ## 📬 联系方式与购买方式
 
 - ✉️ 邮箱：mengzhishanghun@outlook.com  
-- 🛒 国区用户可通过淘宝购买插件：  
-  👉 [小毛定制开发屋](https://c959vmsm71vfi3hllkxy20hn6408571.taobao.com/search.htm?spm=a1z10.1-c.w4023-25705576724.9.11af1b17Kwv6u6&orderType=hotsell_desc)
 
 ---
 
 > _“所有复杂，皆可封装；所有重复，皆可自动化”_
+
 
