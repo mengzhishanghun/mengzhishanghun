@@ -138,7 +138,13 @@ proxy-groups:
 
 # 自定义分流规则
 rules:
-  # 局域网和私有网络
+  # ===== 最高优先级：私有网络和本地回环直连 =====
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve          # 本机回环地址
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve           # Class A 私有网络（包含WG网段）
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve        # Class B 私有网络（包含Docker）
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve       # Class C 私有网络（家用路由器）
+
+  # 局域网和私有网络（规则集）
   - RULE-SET,private,DIRECT
 
   # 广告拦截
@@ -258,6 +264,7 @@ rules:
   - DOMAIN-SUFFIX,bethesda.net,🎮 游戏加速
   - DOMAIN-SUFFIX,minecraft.net,🎮 游戏加速
   - DOMAIN-SUFFIX,mojang.com,🎮 游戏加速
+  
   # 通用代理规则
   - RULE-SET,proxy,🎯 通用代理
   
@@ -266,5 +273,4 @@ rules:
   - GEOIP,CN,DIRECT
   
   # 其他走通用代理
-
   - MATCH,🎯 通用代理
