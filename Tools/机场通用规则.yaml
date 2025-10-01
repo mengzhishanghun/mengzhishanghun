@@ -219,7 +219,7 @@ rules:
   - DOMAIN-SUFFIX,fastly.com,DIRECT
 
   # 通用GitHub下载
-  - DOMAIN-SUFFIX,githubusercontent.com,DIRECT
+  - DOMAIN-SUFFIX,githubusercontent.com,🎯 通用代理
   
   # Origin/EA下载
   - DOMAIN-SUFFIX,ssl-lvlt.cdn.ea.com,DIRECT
@@ -274,3 +274,4 @@ rules:
   
   # 其他走通用代理
   - MATCH,🎯 通用代理
+
