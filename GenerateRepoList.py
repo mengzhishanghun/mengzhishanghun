@@ -80,7 +80,7 @@ def dedup(repos: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
 
 def build_table_block(title: str, repos: List[Dict[str, Any]]) -> str:
     lines = []
-    lines.append(f"### {title}")
+    lines.append(f"## {title}")
     lines.append("")
     lines.append("| 项目名 | 描述 | 语言 | ⭐ Stars | 最近更新 |")
     lines.append("| :-- | :-- | :-- | --: | :-- |")
@@ -118,7 +118,7 @@ def build_markdown_section(orgs: List[str], users: List[str], grouped: bool, sor
             all_repos.extend(fetch_repos_user(session, user))
         all_repos = dedup(all_repos)
         all_repos = sort_repos(all_repos, sort_key)[:limit]
-        header = "## 🚀 当前开源作品展示"
+        header = "# 🚀 当前开源作品展示"
         table = build_table_block(header, all_repos)
         return table
 
