@@ -17,15 +17,16 @@
 
 ---
 <!-- REPO_LIST:START -->
-### 🚀 当前开源作品展示（MZSH-Tools）
+### ## 🚀 当前开源作品展示
 
 | 项目名 | 描述 | 语言 | ⭐ Stars | 最近更新 |
 | :-- | :-- | :-- | --: | :-- |
-| [MDImageEmbed](https://github.com/MZSH-Tools/MDImageEmbed) | 将MD文件内图片链接转换成Base64形式存放 | TypeScript | 0 | 2025-10-14 |
-| [UEPluginAutoPacker](https://github.com/MZSH-Tools/UEPluginAutoPacker) | UE插件多版本自动打包，计划直接实现Fab要求 | Python | 0 | 2025-09-18 |
+| [PySentinel](https://github.com/MZSH-Tools/PySentinel) | 自用加壳软件，离线激活+本机绑定，生成有时间限制的密钥，防止被恶意复制转发 | Python | 0 | 2025-10-15 |
+| [UEPluginAutoPacker](https://github.com/MZSH-Tools/UEPluginAutoPacker) | UE插件多版本自动打包，协助自动化实现Fab要求 | Python | 0 | 2025-10-15 |
+| [MDImageEmbed](https://github.com/MZSH-Tools/MDImageEmbed) | 一个Obsidian插件，将MD文件内图片链接转换成Base64，可复制到剪切板或存放到新文件 | TypeScript | 0 | 2025-10-15 |
 | [P4CaseSync](https://github.com/MZSH-Tools/P4CaseSync) | 保证p4提交与本地文件名完全一致，防止提交时被自动改成小写的问题 | Python | 0 | 2025-08-16 |
-| [PySentinel](https://github.com/MZSH-Tools/PySentinel) | 自用加壳软件 | Python | 0 | 2025-08-08 |
 | [SimpleFileUpdater](https://github.com/MZSH-Tools/SimpleFileUpdater) | 一个简单的文件更新器 | Python | 0 | 2025-05-03 |
+
 
 <!-- REPO_LIST:END -->
 ---
