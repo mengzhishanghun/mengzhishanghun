@@ -17,7 +17,16 @@
 
 ---
 <!-- REPO_LIST:START -->
-（脚本会自动填充这里的内容）
+### 🚀 当前开源作品展示（MZSH-Tools）
+
+| 项目名 | 描述 | 语言 | ⭐ Stars | 最近更新 |
+| :-- | :-- | :-- | --: | :-- |
+| [MDImageEmbed](https://github.com/MZSH-Tools/MDImageEmbed) | 将MD文件内图片链接转换成Base64形式存放 | TypeScript | 0 | 2025-10-14 |
+| [UEPluginAutoPacker](https://github.com/MZSH-Tools/UEPluginAutoPacker) | UE插件多版本自动打包，计划直接实现Fab要求 | Python | 0 | 2025-09-18 |
+| [P4CaseSync](https://github.com/MZSH-Tools/P4CaseSync) | 保证p4提交与本地文件名完全一致，防止提交时被自动改成小写的问题 | Python | 0 | 2025-08-16 |
+| [PySentinel](https://github.com/MZSH-Tools/PySentinel) | 自用加壳软件 | Python | 0 | 2025-08-08 |
+| [SimpleFileUpdater](https://github.com/MZSH-Tools/SimpleFileUpdater) | 一个简单的文件更新器 | Python | 0 | 2025-05-03 |
+
 <!-- REPO_LIST:END -->
 ---
 > 联系方式：mengzhishanghun@outlook.com
