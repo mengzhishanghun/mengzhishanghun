@@ -16,6 +16,11 @@
 </p>
 
 ---
+<!-- REPO_LIST:START -->
+（脚本会自动填充这里的内容）
+<!-- REPO_LIST:END -->
+---
 > 联系方式：mengzhishanghun@outlook.com
 
 > _“所有复杂，皆可封装；所有重复，皆可自动化”_
+
