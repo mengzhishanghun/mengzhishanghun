@@ -1,0 +1,7 @@
+{
+  "orgs": ["MZSH-Tools"],
+  "users": [],
+  "limit": 12,
+  "sort": "stars",
+  "group_by": true
+}
