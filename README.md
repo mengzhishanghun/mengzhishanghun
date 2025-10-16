@@ -12,7 +12,8 @@
   👇 欢迎访问我的简历、博客与作品平台 👇<br/>
   <a href="https://mengzhishanghun.github.io">简历</a> · 
   <a href="https://www.cnblogs.com/mengzhishanghun">博客</a> · 
-  <a href="https://www.fab.com/search?q=mengzhishanghun">Fab</a>
+  <a href="https://www.fab.com/search?q=mengzhishanghun">Fab</a> ·
+  <a href="https://github.com/mengzhishanghun/mengzhishanghun/blob/main/Donate/WeChat.jpg?raw=true" target="_blank">捐赠</a>
 </p>
 
 ---
