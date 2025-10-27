@@ -168,7 +168,6 @@ rules:
   - DOMAIN-SUFFIX,character.ai,🤖 AI访问
   - DOMAIN-SUFFIX,replika.ai,🤖 AI访问
   - DOMAIN-SUFFIX,poe.com,🤖 AI访问
-  - DOMAIN-SUFFIX,github.com,🤖 AI访问
   - DOMAIN-KEYWORD,copilot,🤖 AI访问
   - DOMAIN-KEYWORD,gemini,🤖 AI访问
   
@@ -200,6 +199,37 @@ rules:
   - DOMAIN-SUFFIX,soundcloud.com,🎬 流媒体
   - DOMAIN-SUFFIX,tidal.com,🎬 流媒体
 
+  # GitHub相关
+  
+  # --- GitHub 全量走 通用代理（避免资源阻塞） ---
+  - DOMAIN-SUFFIX,github.com,🎯 通用代理
+  - DOMAIN-SUFFIX,gist.github.com,🎯 通用代理
+  - DOMAIN-SUFFIX,api.github.com,🎯 通用代理
+  - DOMAIN-SUFFIX,live.github.com,🎯 通用代理
+  - DOMAIN-SUFFIX,uploads.github.com,🎯 通用代理
+  - DOMAIN-SUFFIX,codeload.github.com,🎯 通用代理
+
+  # 静态资源与文件服务
+  - DOMAIN-SUFFIX,github.githubassets.com,🎯 通用代理
+  - DOMAIN-SUFFIX,githubassets.com,🎯 通用代理
+  - DOMAIN-SUFFIX,raw.githubusercontent.com,🎯 通用代理
+  - DOMAIN-SUFFIX,avatars.githubusercontent.com,🎯 通用代理
+  - DOMAIN-SUFFIX,camo.githubusercontent.com,🎯 通用代理
+  - DOMAIN-SUFFIX,cloud.githubusercontent.com,🎯 通用代理
+  - DOMAIN-SUFFIX,media.githubusercontent.com,🎯 通用代理
+  - DOMAIN-SUFFIX,objects.githubusercontent.com,🎯 通用代理
+  - DOMAIN-SUFFIX,user-images.githubusercontent.com,🎯 通用代理
+
+  # 通用GitHub下载
+  - DOMAIN-SUFFIX,githubusercontent.com,🎯 通用代理
+
+  # ZIP/Tar 下载（有些走 S3）
+  - DOMAIN-SUFFIX,github-cloud.s3.amazonaws.com,🎯 通用代理
+
+  # 状态页也走代理，便于排错
+  - DOMAIN-SUFFIX,githubstatus.com,🎯 通用代理
+
+
   # 游戏下载直连规则（必须放在游戏服务规则前面）
   
   # Steam下载相关
@@ -217,9 +247,6 @@ rules:
   - DOMAIN-SUFFIX,akamaihd.net,DIRECT
   - DOMAIN-SUFFIX,akamaized.net,DIRECT
   - DOMAIN-SUFFIX,fastly.com,DIRECT
-
-  # 通用GitHub下载
-  - DOMAIN-SUFFIX,githubusercontent.com,🎯 通用代理
   
   # Origin/EA下载
   - DOMAIN-SUFFIX,ssl-lvlt.cdn.ea.com,DIRECT
@@ -274,4 +301,5 @@ rules:
   
   # 其他走通用代理
   - MATCH,🎯 通用代理
+
 
