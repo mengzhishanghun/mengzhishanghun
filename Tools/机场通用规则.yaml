@@ -249,6 +249,7 @@ rules:
   - DOMAIN-SUFFIX,akamaihd.net,DIRECT
   - DOMAIN-SUFFIX,akamaized.net,DIRECT
   - DOMAIN-SUFFIX,fastly.com,DIRECT
+  - DOMAIN-SUFFIX,forums.unrealengine.com,DIRECT
   
   # Origin/EA下载
   - DOMAIN-SUFFIX,ssl-lvlt.cdn.ea.com,DIRECT
@@ -303,6 +304,7 @@ rules:
   
   # 其他走通用代理
   - MATCH,🎯 通用代理
+
 
 
 
