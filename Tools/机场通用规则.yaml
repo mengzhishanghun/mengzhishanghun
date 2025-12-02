@@ -244,7 +244,6 @@ rules:
   - DOMAIN-SUFFIX,epicgames-download1-1251447533.file.myqcloud.com,DIRECT
   - DOMAIN-KEYWORD,epicgames-download,DIRECT
   - DOMAIN-SUFFIX,Fab.com,DIRECT
-  - DOMAIN,forums.unrealengine.com,DIRECT 
   
   # 通用CDN下载域名
   - DOMAIN-SUFFIX,akamaihd.net,DIRECT
@@ -304,6 +303,7 @@ rules:
   
   # 其他走通用代理
   - MATCH,🎯 通用代理
+
 
 
 
