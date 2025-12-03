@@ -153,6 +153,8 @@ rules:
   # 国内部分常用
   - DOMAIN-SUFFIX,icloud.com.cn,DIRECT
   - DOMAIN-SUFFIX,cn.bing.com,DIRECT
+  - DOMAIN-SUFFIX,cloudfront.net,DIRECT
+  - DOMAIN-SUFFIX,unrealengine.com,DIRECT
 
   # AI服务
   - DOMAIN-SUFFIX,jetbrains.ai,🤖 AI访问
@@ -273,7 +275,7 @@ rules:
   - DOMAIN-SUFFIX,steampowered.com,🎮 游戏加速
   - DOMAIN-SUFFIX,steamcommunity.com,🎮 游戏加速
   - DOMAIN-SUFFIX,epicgames.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,unrealengine.com,🎮 游戏加速
+  #- DOMAIN-SUFFIX,unrealengine.com,🎮 游戏加速
   - DOMAIN-SUFFIX,battle.net,🎮 游戏加速
   - DOMAIN-SUFFIX,blizzard.com,🎮 游戏加速
   - DOMAIN-SUFFIX,riotgames.com,🎮 游戏加速
@@ -303,6 +305,7 @@ rules:
   
   # 其他走通用代理
   - MATCH,🎯 通用代理
+
 
 
 
