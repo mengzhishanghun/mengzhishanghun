@@ -21,12 +21,13 @@
 
 | 项目名 | 描述 | 语言 | ⭐ Stars | 最近更新 |
 | :-- | :-- | :-- | --: | :-- |
-| [LiteIPTV](https://github.com/MZSH-Tools/LiteIPTV) | 精简可用的IPTV源，专为家中老人打造 | Python | 1 | 2025-12-12 |
+| [LiteIPTV](https://github.com/MZSH-Tools/LiteIPTV) | 精简可用的IPTV源，专为家中老人打造 | Python | 1 | 2025-12-13 |
 | [MDImageEmbed](https://github.com/MZSH-Tools/MDImageEmbed) | 为了方便发博客写的，一个Obsidian插件，将MD文件导出到粘贴板或者存放为新文件，本地图片链接自动转换为Base64 | JavaScript | 0 | 2025-11-02 |
 | [PySentinel](https://github.com/MZSH-Tools/PySentinel) | 自用加壳软件，离线激活+本机绑定，生成有时间限制的密钥，防止被恶意复制转发 | Python | 0 | 2025-10-16 |
 | [P4CaseSync](https://github.com/MZSH-Tools/P4CaseSync) | 不同系统使用p4时可能会出现新建文件提交自动小写的问题，该插件保证p4提交与本地文件名完全一致，防止提交时被自动改成小写的问题 | Python | 0 | 2025-10-16 |
 | [UEPluginAutoPacker](https://github.com/MZSH-Tools/UEPluginAutoPacker) | UE插件多版本自动打包，协助自动化实现Fab要求 | Python | 0 | 2025-10-15 |
 | [SimpleFileUpdater](https://github.com/MZSH-Tools/SimpleFileUpdater) | 一个简单的文件更新器 | Python | 0 | 2025-05-03 |
+
 
 
 
