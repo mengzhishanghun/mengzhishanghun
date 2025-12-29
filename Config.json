@@ -1,6 +1,8 @@
 {
-  "orgs": ["MZSH-Tools"],
-  "users": [],
+  "orgs": {
+    "MZSH-Tools": []
+  },
+  "users": {},
   "limit": 100,
   "sort": "stars",
   "group_by": false

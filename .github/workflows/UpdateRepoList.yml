@@ -3,7 +3,7 @@ name: Update Repo List
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: "0 0 * * *"   # 每天 00:00 UTC
+    - cron: "0 16 * * *"   # 每天 16:00 UTC（北京时间 00:00）
 
 jobs:
   update:
@@ -27,7 +27,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python GenerateRepoList.py --config repo_sources.json --readme README.md
+          python GenerateRepoList.py --config Config.json --readme README.md
           if git diff --quiet; then
             echo "No changes."
             exit 0
