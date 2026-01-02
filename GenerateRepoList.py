@@ -117,11 +117,11 @@ def BuildMarkdownSection(Orgs: Dict[str, List[str]], Users: Dict[str, List[str]]
 def ReplaceInReadme(ReadmePath: str, NewBlock: str) -> bool:
     FilePath = Path(ReadmePath)
     Content = FilePath.read_text(encoding="utf-8")
-    Pattern = re.compile(rf"({MARKER_START}\s*)(.*?)(\s*{MARKER_END})", re.DOTALL)
+    Pattern = re.compile(rf"({MARKER_START})\s*(.*?)\s*({MARKER_END})", re.DOTALL)
     if not Pattern.search(Content):
         NewContent = Content.rstrip() + "\n\n" + f"{MARKER_START}\n{NewBlock}{MARKER_END}\n"
     else:
-        NewContent = Pattern.sub(rf"\1{NewBlock}\3", Content)
+        NewContent = Pattern.sub(rf"\1\n{NewBlock}\3", Content)
     if NewContent != Content:
         FilePath.write_text(NewContent, encoding="utf-8")
         return True
