@@ -1,23 +1,51 @@
 <h1 align="center">Hi, I'm mengzhishanghun</h1>
 <h3 align="center">一个专注于Unreal Engine插件开发的独立开发者</h3>
+<p align="center"><i>"所有复杂，皆可封装；所有重复，皆可自动化"</i></p>
 
 <p align="center">
   <!-- Tech Stack -->
   <img src="https://img.shields.io/badge/-Unreal%20Engine-313131?logo=unrealengine" alt="Unreal Engine" />
-  <img src="https://img.shields.io/badge/-C++-00599C?logo=c%2B%2B&logoColor=white" alt="C++" />
+  <img src="https://img.shields.io/badge/-C++-313131?logo=c%2B%2B&logoColor=white" alt="C++" />
   <img src="https://img.shields.io/badge/Python-313131?logo=python&logoColor=FFD43B" alt="Python" />
 </p>
 
 <p align="center">
-  👇 欢迎访问我的博客与作品 👇<br/>
-  <a href="https://www.cnblogs.com/mengzhishanghun">博客</a> · 
-  <a href="https://www.fab.com/search?q=mengzhishanghun">Fab</a> 
+  <a href="https://mengzhishanghun.github.io/.github/">
+    <img src="https://img.shields.io/badge/☕-Buy%20Me%20a%20Coffee-orange" alt="Donate" />
+  </a>
 </p>
 
 ---
-<!-- REPO_LIST:START -->
-## # 🚀 当前开源作品展示
 
+# 💼 承接项目
+
+🏠 居家办公，承接外包项目
+
+- UE 插件定制开发
+- UE 编辑器工具开发
+- UE 工作流自动化
+- Python 脚本 / 工具开发
+- 游戏开发技术咨询
+
+前往 [个人简历](https://mengzhishanghun.github.io/) 查看我的详细履历
+
+如有合作意向，欢迎通过 ✉️ mengzhishanghun@outlook.com 与我联系
+
+---
+
+# 🎨 作品展示
+
+## 📝 技术博客
+
+前往 [博客园](https://www.cnblogs.com/mengzhishanghun) 查看我的技术文章
+
+## 🛒 在售插件
+
+前往 [Fab商店](https://www.fab.com/search?q=mengzhishanghun) 查看我的 UE 插件
+
+## 🚀 开源作品
+
+<!-- REPO_LIST:START -->
 | 项目名 | 描述 | 语言 | ⭐ Stars | 最近更新 |
 | :-- | :-- | :-- | --: | :-- |
 | [MDImageEmbed](https://github.com/MZSH-ObsidianPlugins/MDImageEmbed) | 为了方便发博客写的，一个Obsidian插件，将MD文件导出到粘贴板或者存放为新文件，本地图片链接自动转换为Base64 | JavaScript | 0 | 2025-12-29 |
@@ -27,8 +55,3 @@
 | [UEPluginAutoPacker](https://github.com/MZSH-Tools/UEPluginAutoPacker) | UE插件多版本自动打包，协助自动化实现Fab要求 | Python | 0 | 2025-10-15 |
 | [SimpleFileUpdater](https://github.com/MZSH-Tools/SimpleFileUpdater) | 一个简单的文件更新器 | Python | 0 | 2025-05-03 |
 <!-- REPO_LIST:END -->
----
-> 联系方式：mengzhishanghun@outlook.com
-
-> _“所有复杂，皆可封装；所有重复，皆可自动化”_
-

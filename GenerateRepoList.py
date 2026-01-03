@@ -78,8 +78,6 @@ def EscapeTableCell(Text: str) -> str:
 
 def BuildTableBlock(Title: str, Repos: List[Dict[str, Any]]) -> str:
     Lines = [
-        f"## {Title}",
-        "",
         "| 项目名 | 描述 | 语言 | ⭐ Stars | 最近更新 |",
         "| :-- | :-- | :-- | --: | :-- |"
     ]
