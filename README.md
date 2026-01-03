@@ -39,6 +39,8 @@
 <!-- REPO_LIST:START -->
 | 项目名 | 描述 | 语言 | ⭐ Stars | 最近更新 |
 | :-- | :-- | :-- | --: | :-- |
+| [.github](https://github.com/MZSH-ObsidianPlugins/.github) | Default community health files for MZSH-ObsidianPlugins | N/A | 0 | 2026-01-03 |
+| [.github](https://github.com/MZSH-Tools/.github) | Default community health files for MZSH-Tools | N/A | 0 | 2026-01-03 |
 | [MDImageEmbed](https://github.com/MZSH-ObsidianPlugins/MDImageEmbed) | 为了方便发博客写的，一个Obsidian插件，将MD文件导出到粘贴板或者存放为新文件，本地图片链接自动转换为Base64 | JavaScript | 0 | 2025-12-29 |
 | [AutoPYVideos](https://github.com/MZSH-Tools/AutoPYVideos) | 一个一键油管视频自动搬运并翻译工具，全自动后台处理版 | Python | 0 | 2025-12-18 |
 | [PySentinel](https://github.com/MZSH-Tools/PySentinel) | 自用加壳软件，离线激活+本机绑定，生成有时间限制的密钥，防止被恶意复制转发 | Python | 0 | 2025-10-16 |
