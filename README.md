@@ -2,19 +2,6 @@
 <h3 align="center">一个专注于Unreal Engine插件开发的独立开发者</h3>
 <p align="center"><i>"所有复杂，皆可封装；所有重复，皆可自动化"</i></p>
 
-<p align="center">
-  <!-- Tech Stack -->
-  <img src="https://img.shields.io/badge/-Unreal%20Engine-313131?logo=unrealengine" alt="Unreal Engine" />
-  <img src="https://img.shields.io/badge/-C++-313131?logo=c%2B%2B&logoColor=white" alt="C++" />
-  <img src="https://img.shields.io/badge/Python-313131?logo=python&logoColor=FFD43B" alt="Python" />
-</p>
-
-<p align="center">
-  <a href="https://mengzhishanghun.github.io/.github/">
-    <img src="https://img.shields.io/badge/☕-Buy%20Me%20a%20Coffee-orange" alt="Donate" />
-  </a>
-</p>
-
 ---
 
 # 💼 承接项目
@@ -42,6 +29,10 @@
 ## 🛒 在售插件
 
 前往 [Fab商店](https://www.fab.com/search?q=mengzhishanghun) 查看我的 UE 插件
+
+## ☕ 支持作者
+
+如果我的项目对你有帮助，欢迎前往 [捐赠页面](https://mengzhishanghun.github.io/.github/) 请我喝杯咖啡
 
 ## 🚀 开源作品
 
