@@ -1,7 +1,7 @@
 {
   "orgs": {
-    "MZSH-Tools": [],
-    "MZSH-ObsidianPlugins": ["obsidian-releases"]
+    "MZSH-Tools": [".github"],
+    "MZSH-ObsidianPlugins": [".github","obsidian-releases"]
   },
   "users": {},
   "limit": 100,
