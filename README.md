@@ -39,8 +39,8 @@
 <!-- REPO_LIST:START -->
 | 项目名 | 描述 | 语言 | ⭐ Stars | 最近更新 |
 | :-- | :-- | :-- | --: | :-- |
+| [UEQuickStart](https://github.com/MZSH-Tools/UEQuickStart) | 一键快速编译 Unreal Engine 项目的 GUI 工具 | Python | 0 | 2026-01-22 |
 | [P4StreamSwitcher](https://github.com/MZSH-Tools/P4StreamSwitcher) | P4流工作区快捷切换工具，自用，仅支持二层深度流切换，以达到一个工作区控制多个文件夹的目的 | Python | 0 | 2026-01-16 |
-| [UEBuildToGO](https://github.com/MZSH-Tools/UEBuildToGO) | 一键编译并打开 Unreal Engine 项目的 GUI 工具 | Python | 0 | 2026-01-16 |
 | [UEPluginManager](https://github.com/MZSH-Tools/UEPluginManager) | UE插件管理工具 | Python | 0 | 2026-01-10 |
 | [DirDiffSync](https://github.com/MZSH-Tools/DirDiffSync) | 项目比对同步工具，自动删除多余文件，更新修改文件，添加新增文件 | Python | 0 | 2026-01-06 |
 | [MDImageEmbed](https://github.com/MZSH-ObsidianPlugins/MDImageEmbed) | 为了方便发博客写的，一个Obsidian插件，将MD文件导出到粘贴板或者存放为新文件，本地图片链接自动转换为Base64 | JavaScript | 0 | 2025-12-29 |
