@@ -160,6 +160,9 @@ rules:
   - DOMAIN-SUFFIX,claude.ai,🤖 AI访问
   - DOMAIN-SUFFIX,claude.com,🤖 AI访问
   - DOMAIN-SUFFIX,anthropic.com,🤖 AI访问
+  - DOMAIN-SUFFIX,claudeusercontent.com,🤖 AI访问
+  - DOMAIN-KEYWORD,claude,🤖 AI访问
+  - DOMAIN-KEYWORD,anthropic,🤖 AI访问
   - DOMAIN-SUFFIX,openai.com,🤖 AI访问
   - DOMAIN-SUFFIX,chatgpt.com,🤖 AI访问
   - DOMAIN-SUFFIX,oaiusercontent.com,🤖 AI访问
