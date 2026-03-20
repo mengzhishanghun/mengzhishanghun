@@ -158,6 +158,7 @@ rules:
   # AI服务
   - DOMAIN-SUFFIX,jetbrains.ai,🤖 AI访问
   - DOMAIN-SUFFIX,claude.ai,🤖 AI访问
+  - DOMAIN-SUFFIX,claude.com,🤖 AI访问
   - DOMAIN-SUFFIX,anthropic.com,🤖 AI访问
   - DOMAIN-SUFFIX,openai.com,🤖 AI访问
   - DOMAIN-SUFFIX,chatgpt.com,🤖 AI访问
@@ -304,12 +305,3 @@ rules:
   
   # 其他走通用代理
   - MATCH,🎯 通用代理
-
-
-
-
-
-
-
-
-
