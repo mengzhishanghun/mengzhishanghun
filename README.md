@@ -49,8 +49,9 @@
 | :-- | :-- | :-- | --: | :-- |
 | [MDImageEmbed](https://github.com/MZSH-ObsidianPlugins/MDImageEmbed) | 为了方便发博客写的，一个Obsidian插件，将MD文件导出到粘贴板或者存放为新文件，本地图片链接自动转换为Base64 | JavaScript | 2 | 2026-04-14 |
 | [UEQuickStart](https://github.com/MZSH-Tools/UEQuickStart) | 一键快速编译 Unreal Engine 项目的 GUI 工具 | Python | 1 | 2026-03-20 |
+| [SimpleFileUpdater](https://github.com/MZSH-Tools/SimpleFileUpdater) | 一个简单的文件更新器 | Python | 0 | 2026-04-18 |
+| [MDBlogPacker](https://github.com/MZSH-Tools/MDBlogPacker) | 发博客效率工具：Markdown 本地图片转 Base64 内嵌，一键复制到剪贴板，直接发博客园/CSDN/掘金等平台 | Python | 0 | 2026-04-18 |
 | [UEPluginAutoPacker](https://github.com/MZSH-Tools/UEPluginAutoPacker) | UE插件多版本自动打包，协助自动化实现Fab要求 | Python | 0 | 2026-04-17 |
-| [SimpleFileUpdater](https://github.com/MZSH-Tools/SimpleFileUpdater) | 一个简单的文件更新器 | Python | 0 | 2026-04-17 |
 | [P4StreamSwitcher](https://github.com/MZSH-Tools/P4StreamSwitcher) | P4流工作区快捷切换工具，自用，仅支持二层深度流切换，以达到一个工作区控制多个文件夹的目的 | Python | 0 | 2026-03-23 |
 | [UEPluginManager](https://github.com/MZSH-Tools/UEPluginManager) | UE插件管理工具 | Python | 0 | 2026-01-29 |
 | [AutoPYVideos](https://github.com/MZSH-Tools/AutoPYVideos) | 一个一键油管视频自动搬运并翻译工具，全自动后台处理版 | Python | 0 | 2026-01-29 |
