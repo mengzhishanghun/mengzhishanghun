@@ -91,6 +91,7 @@ proxy-groups:
     type: fallback
     include-all: true
     filter: "(?i)港|hk|hongkong|hong.?kong"
+    exclude-filter: "\.cn"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
@@ -98,6 +99,7 @@ proxy-groups:
     type: fallback
     include-all: true
     filter: "(?i)台湾|台|tw|taiwan"
+    exclude-filter: "\.cn"
     url: http://www.gstatic.com/generate_204
     interval: 300
     
@@ -105,6 +107,7 @@ proxy-groups:
     type: fallback
     include-all: true
     filter: "(?i)日本|日|jp|japan"
+    exclude-filter: "\.cn"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
@@ -112,6 +115,7 @@ proxy-groups:
     type: fallback
     include-all: true
     filter: "(?i)韩国|韩|kr|korea"
+    exclude-filter: "\.cn"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
@@ -119,6 +123,7 @@ proxy-groups:
     type: fallback
     include-all: true
     filter: "(?i)新加坡|新|sg|singapore"
+    exclude-filter: "\.cn"
     url: http://www.gstatic.com/generate_204
     interval: 300
         
@@ -126,6 +131,7 @@ proxy-groups:
     type: fallback
     include-all: true
     filter: "(?i)英国|英|uk|britain|united.?kingdom"
+    exclude-filter: "\.cn"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
@@ -133,6 +139,7 @@ proxy-groups:
     type: fallback
     include-all: true
     filter: "(?i)美|us|america|united.?states"
+    exclude-filter: "\.cn"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
