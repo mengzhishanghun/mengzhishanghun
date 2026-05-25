@@ -90,56 +90,49 @@ proxy-groups:
   - name: "🇭🇰 香港"
     type: fallback
     include-all: true
-    filter: "(?i)港|hk|hongkong|hong.?kong"
-    exclude-filter: "\.cn"
+    filter: "(?i)^(?!.*cn).*(港|hk|hongkong|hong.?kong)"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
   - name: "🇹🇼 台湾"
     type: fallback
     include-all: true
-    filter: "(?i)台湾|台|tw|taiwan"
-    exclude-filter: "\.cn"
+    filter: "(?i)^(?!.*cn).*(台湾|台|tw|taiwan)"
     url: http://www.gstatic.com/generate_204
     interval: 300
     
   - name: "🇯🇵 日本"
     type: fallback
     include-all: true
-    filter: "(?i)日本|日|jp|japan"
-    exclude-filter: "\.cn"
+    filter: "(?i)^(?!.*cn).*(日本|日|jp|japan)"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
   - name: "🇰🇷 韩国"
     type: fallback
     include-all: true
-    filter: "(?i)韩国|韩|kr|korea"
-    exclude-filter: "\.cn"
+    filter: "(?i)^(?!.*cn).*(韩国|韩|kr|korea)"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
   - name: "🇸🇬 新加坡"
     type: fallback
     include-all: true
-    filter: "(?i)新加坡|新|sg|singapore"
-    exclude-filter: "\.cn"
+    filter: "(?i)^(?!.*cn).*(新加坡|新|sg|singapore)"
     url: http://www.gstatic.com/generate_204
     interval: 300
         
   - name: "🇬🇧 英国"
     type: fallback
     include-all: true
-    filter: "(?i)英国|英|uk|britain|united.?kingdom"
-    exclude-filter: "\.cn"
+    filter: "(?i)^(?!.*cn).*(英国|英|uk|britain|united.?kingdom)"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
   - name: "🇺🇸 美国"
     type: fallback
     include-all: true
-    filter: "(?i)美|us|america|united.?states"
-    exclude-filter: "\.cn"
+    filter: "(?i)^(?!.*cn).*(美|us|america|united.?states)"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
