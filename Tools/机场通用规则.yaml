@@ -226,9 +226,6 @@ rules:
   - DOMAIN-SUFFIX,epicgames-download1-1251447533.file.myqcloud.com,DIRECT
   - DOMAIN-KEYWORD,epicgames-download,DIRECT
   - DOMAIN-SUFFIX,fab.com,DIRECT
-  - DOMAIN-SUFFIX,akamaihd.net,DIRECT
-  - DOMAIN-SUFFIX,akamaized.net,DIRECT
-  - DOMAIN-SUFFIX,fastly.com,DIRECT
   - DOMAIN-SUFFIX,ssl-lvlt.cdn.ea.com,DIRECT
   - DOMAIN-SUFFIX,origin-a.akamaihd.net,DIRECT
   - DOMAIN-SUFFIX,level3.blizzard.com,DIRECT
@@ -283,6 +280,37 @@ rules:
   - DOMAIN-SUFFIX,mzstatic.com,DIRECT
   - DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
   - DOMAIN-SUFFIX,icloud-content.com,DIRECT
+
+  # 银行
+  - DOMAIN-SUFFIX,icbc.com.cn,DIRECT
+  - DOMAIN-SUFFIX,ccb.com,DIRECT
+  - DOMAIN-SUFFIX,ccb.com.cn,DIRECT
+  - DOMAIN-SUFFIX,abchina.com,DIRECT
+  - DOMAIN-SUFFIX,abchina.com.cn,DIRECT
+  - DOMAIN-SUFFIX,boc.cn,DIRECT
+  - DOMAIN-SUFFIX,bankcomm.com,DIRECT
+  - DOMAIN-SUFFIX,cmbchina.com,DIRECT
+  - DOMAIN-SUFFIX,citicbank.com,DIRECT
+  - DOMAIN-SUFFIX,cebbank.com,DIRECT
+  - DOMAIN-SUFFIX,cmbc.com.cn,DIRECT
+  - DOMAIN-SUFFIX,pingan.com,DIRECT
+  - DOMAIN-SUFFIX,pingan.com.cn,DIRECT
+  - DOMAIN-SUFFIX,spdb.com.cn,DIRECT
+  - DOMAIN-SUFFIX,cib.com.cn,DIRECT
+  - DOMAIN-SUFFIX,hxb.com.cn,DIRECT
+  - DOMAIN-SUFFIX,cgbchina.com.cn,DIRECT
+  - DOMAIN-SUFFIX,psbc.com,DIRECT
+
+  # 支付
+  - DOMAIN-SUFFIX,alipay.com,DIRECT
+  - DOMAIN-SUFFIX,alipayobjects.com,DIRECT
+  - DOMAIN-SUFFIX,unionpay.com,DIRECT
+  - DOMAIN-SUFFIX,95516.com,DIRECT
+  - DOMAIN-SUFFIX,tenpay.com,DIRECT
+
+  # 出行/政务
+  - DOMAIN-SUFFIX,12306.cn,DIRECT
+  - DOMAIN-SUFFIX,gov.cn,DIRECT
 
   # 其他国内常用
   - DOMAIN-SUFFIX,cn.bing.com,DIRECT
