@@ -1,6 +1,5 @@
 # 规则集配置
 rule-providers:
-  # 广告
   reject:
     type: http
     behavior: domain
@@ -8,7 +7,6 @@ rule-providers:
     path: ./ruleset/reject.yaml
     interval: 86400
 
-  # 私有
   private:
     type: http
     behavior: domain
@@ -16,7 +14,6 @@ rule-providers:
     path: ./ruleset/private.yaml
     interval: 86400
 
-  # 代理
   proxy:
     type: http
     behavior: domain
@@ -24,7 +21,6 @@ rule-providers:
     path: ./ruleset/proxy.yaml
     interval: 86400
 
-  # 直连
   direct:
     type: http
     behavior: domain
@@ -34,7 +30,7 @@ rule-providers:
 
 # 自定义策略组配置
 proxy-groups:
-  # ===== 服务策略组（会显示在最前面）=====
+  # ===== 服务策略组 =====
   - name: "🎯 通用代理"
     type: select
     proxies:
@@ -46,7 +42,7 @@ proxy-groups:
       - "🇬🇧 英国"
       - "🇺🇸 美国"
       - "DIRECT"
-    
+
   - name: "🤖 AI访问"
     type: select
     proxies:
@@ -59,7 +55,7 @@ proxy-groups:
       - "🇬🇧 英国"
       - "🇺🇸 美国"
       - "DIRECT"
-      
+
   - name: "🎬 流媒体"
     type: select
     proxies:
@@ -85,7 +81,7 @@ proxy-groups:
       - "🇬🇧 英国"
       - "🇺🇸 美国"
       - "DIRECT"
-    
+
   # ===== 地区节点（自动筛选）=====
   - name: "🇭🇰 香港"
     type: fallback
@@ -97,66 +93,56 @@ proxy-groups:
   - name: "🇹🇼 台湾"
     type: fallback
     include-all: true
-    filter: "(?i)^(?!.*cn).*(台湾|台|tw|taiwan)"
+    filter: "(?i)^(?!.*cn).*(台湾|tw|taiwan)"
     url: http://www.gstatic.com/generate_204
     interval: 300
-    
+
   - name: "🇯🇵 日本"
     type: fallback
     include-all: true
-    filter: "(?i)^(?!.*cn).*(日本|日|jp|japan)"
+    filter: "(?i)^(?!.*cn).*(日本|jp|japan)"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
   - name: "🇰🇷 韩国"
     type: fallback
     include-all: true
-    filter: "(?i)^(?!.*cn).*(韩国|韩|kr|korea)"
+    filter: "(?i)^(?!.*cn).*(韩国|kr|korea)"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
   - name: "🇸🇬 新加坡"
     type: fallback
     include-all: true
-    filter: "(?i)^(?!.*cn).*(新加坡|新|sg|singapore)"
+    filter: "(?i)^(?!.*cn).*(新加坡|sg|singapore)"
     url: http://www.gstatic.com/generate_204
     interval: 300
-        
+
   - name: "🇬🇧 英国"
     type: fallback
     include-all: true
-    filter: "(?i)^(?!.*cn).*(英国|英|uk|britain|united.?kingdom)"
+    filter: "(?i)^(?!.*cn).*(英国|uk|britain|united.?kingdom)"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
   - name: "🇺🇸 美国"
     type: fallback
     include-all: true
-    filter: "(?i)^(?!.*cn).*(美|us|america|united.?states)"
+    filter: "(?i)^(?!.*cn).*(美国|us|america|united.?states)"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
-# 自定义分流规则
+# 自定义分流规则（从上到下逐条匹配，命中即停）
 rules:
-  # ===== 最高优先级：私有网络和本地回环直连 =====
-  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve          # 本机回环地址
-  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve           # Class A 私有网络（包含WG网段）
-  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve        # Class B 私有网络（包含Docker）
-  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve       # Class C 私有网络（家用路由器）
-
-  # 局域网和私有网络（规则集）
+  # ===== 网络基础 =====
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
   - RULE-SET,private,DIRECT
-
-  # 广告拦截
   - RULE-SET,reject,REJECT
-  
-  # 国内部分常用
-  - DOMAIN-SUFFIX,icloud.com.cn,DIRECT
-  - DOMAIN-SUFFIX,cn.bing.com,DIRECT
-  - DOMAIN-SUFFIX,cloudfront.net,DIRECT
 
-  # AI服务
-  - DOMAIN-SUFFIX,jetbrains.ai,🤖 AI访问
+  # ===== AI 服务 =====
   - DOMAIN-SUFFIX,claude.ai,🤖 AI访问
   - DOMAIN-SUFFIX,claude.com,🤖 AI访问
   - DOMAIN-SUFFIX,anthropic.com,🤖 AI访问
@@ -174,10 +160,12 @@ rules:
   - DOMAIN-SUFFIX,character.ai,🤖 AI访问
   - DOMAIN-SUFFIX,replika.ai,🤖 AI访问
   - DOMAIN-SUFFIX,poe.com,🤖 AI访问
+  - DOMAIN-SUFFIX,jetbrains.ai,🤖 AI访问
   - DOMAIN-KEYWORD,copilot,🤖 AI访问
   - DOMAIN-KEYWORD,gemini,🤖 AI访问
-  
-  # 流媒体服务
+
+  # ===== 流媒体 =====
+  - DOMAIN-SUFFIX,tv.apple.com,🎬 流媒体
   - DOMAIN-SUFFIX,netflix.com,🎬 流媒体
   - DOMAIN-SUFFIX,nflxvideo.net,🎬 流媒体
   - DOMAIN-SUFFIX,youtube.com,🎬 流媒体
@@ -188,10 +176,9 @@ rules:
   - DOMAIN-SUFFIX,spotify.com,🎬 流媒体
   - DOMAIN-SUFFIX,hulu.com,🎬 流媒体
   - DOMAIN-SUFFIX,primevideo.com,🎬 流媒体
-  - DOMAIN-SUFFIX,amazon.com,🎬 流媒体
+  - DOMAIN-SUFFIX,amazonvideo.com,🎬 流媒体
   - DOMAIN-SUFFIX,hbomax.com,🎬 流媒体
   - DOMAIN-SUFFIX,max.com,🎬 流媒体
-  - DOMAIN-SUFFIX,tv.apple.com,🎬 流媒体
   - DOMAIN-SUFFIX,paramountplus.com,🎬 流媒体
   - DOMAIN-SUFFIX,twitch.tv,🎬 流媒体
   - DOMAIN-SUFFIX,crunchyroll.com,🎬 流媒体
@@ -205,76 +192,37 @@ rules:
   - DOMAIN-SUFFIX,soundcloud.com,🎬 流媒体
   - DOMAIN-SUFFIX,tidal.com,🎬 流媒体
 
-  # GitHub相关
-  
-  # --- GitHub 全量走 通用代理（避免资源阻塞） ---
+  # ===== GitHub =====
   - DOMAIN-SUFFIX,github.com,🎯 通用代理
-  - DOMAIN-SUFFIX,gist.github.com,🎯 通用代理
-  - DOMAIN-SUFFIX,api.github.com,🎯 通用代理
-  - DOMAIN-SUFFIX,live.github.com,🎯 通用代理
-  - DOMAIN-SUFFIX,uploads.github.com,🎯 通用代理
-  - DOMAIN-SUFFIX,codeload.github.com,🎯 通用代理
-
-  # 静态资源与文件服务
-  - DOMAIN-SUFFIX,github.githubassets.com,🎯 通用代理
-  - DOMAIN-SUFFIX,githubassets.com,🎯 通用代理
-  - DOMAIN-SUFFIX,raw.githubusercontent.com,🎯 通用代理
-  - DOMAIN-SUFFIX,avatars.githubusercontent.com,🎯 通用代理
-  - DOMAIN-SUFFIX,camo.githubusercontent.com,🎯 通用代理
-  - DOMAIN-SUFFIX,cloud.githubusercontent.com,🎯 通用代理
-  - DOMAIN-SUFFIX,media.githubusercontent.com,🎯 通用代理
-  - DOMAIN-SUFFIX,objects.githubusercontent.com,🎯 通用代理
-  - DOMAIN-SUFFIX,user-images.githubusercontent.com,🎯 通用代理
-
-  # 通用GitHub下载
   - DOMAIN-SUFFIX,githubusercontent.com,🎯 通用代理
-
-  # ZIP/Tar 下载（有些走 S3）
+  - DOMAIN-SUFFIX,githubassets.com,🎯 通用代理
   - DOMAIN-SUFFIX,github-cloud.s3.amazonaws.com,🎯 通用代理
-
-  # 状态页也走代理，便于排错
   - DOMAIN-SUFFIX,githubstatus.com,🎯 通用代理
 
+  # ===== 游戏 =====
 
-  # 游戏下载直连规则（必须放在游戏服务规则前面）
-  
-  # Steam下载相关
+  # 游戏下载直连（必须在游戏服务代理规则前）
   - DOMAIN,steamcdn-a.akamaihd.net,DIRECT
   - DOMAIN-SUFFIX,steamserver.net,DIRECT
   - DOMAIN-SUFFIX,steamcontent.com,DIRECT
   - DOMAIN-SUFFIX,steamusercontent.com,DIRECT
   - DOMAIN-SUFFIX,steamstatic.com,DIRECT
-  
-  # Epic Games下载相关
   - DOMAIN-SUFFIX,epicgames-download1-1251447533.file.myqcloud.com,DIRECT
   - DOMAIN-KEYWORD,epicgames-download,DIRECT
-  - DOMAIN-SUFFIX,Fab.com,DIRECT
-  
-  # 通用CDN下载域名
+  - DOMAIN-SUFFIX,fab.com,DIRECT
   - DOMAIN-SUFFIX,akamaihd.net,DIRECT
   - DOMAIN-SUFFIX,akamaized.net,DIRECT
   - DOMAIN-SUFFIX,fastly.com,DIRECT
-  
-  # Origin/EA下载
   - DOMAIN-SUFFIX,ssl-lvlt.cdn.ea.com,DIRECT
   - DOMAIN-SUFFIX,origin-a.akamaihd.net,DIRECT
-  
-  # 暴雪战网下载
   - DOMAIN-SUFFIX,level3.blizzard.com,DIRECT
   - DOMAIN-SUFFIX,blzddist1-a.akamaihd.net,DIRECT
   - DOMAIN-SUFFIX,client05.pdl.wow.battlenet.com.cn,DIRECT
   - DOMAIN-SUFFIX,client02.pdl.wow.battlenet.com.cn,DIRECT
-  
-  # Rockstar下载
   - DOMAIN-SUFFIX,gamedownloads-rockstargames-com.akamaized.net,DIRECT
-  
-  # 通用下载关键词匹配
-  - DOMAIN-KEYWORD,download,DIRECT
-  - DOMAIN-KEYWORD,cdn,DIRECT
-  - DOMAIN-KEYWORD,cache,DIRECT
-  - DOMAIN-KEYWORD,content,DIRECT
-  
-  # 游戏服务（登录/商店/社区）走代理
+  - DOMAIN-KEYWORD,gamedownload,DIRECT
+
+  # 游戏服务（登录/商店/社区）
   - DOMAIN-SUFFIX,steampowered.com,🎮 游戏加速
   - DOMAIN-SUFFIX,steamcommunity.com,🎮 游戏加速
   - DOMAIN-SUFFIX,epicgames.com,🎮 游戏加速
@@ -298,13 +246,24 @@ rules:
   - DOMAIN-SUFFIX,bethesda.net,🎮 游戏加速
   - DOMAIN-SUFFIX,minecraft.net,🎮 游戏加速
   - DOMAIN-SUFFIX,mojang.com,🎮 游戏加速
-  
-  # 通用代理规则
+
+  # ===== 国内服务直连 =====
+
+  # Apple/iCloud（国区 Apple ID 需直连）
+  - DOMAIN-SUFFIX,apple.com,DIRECT
+  - DOMAIN-SUFFIX,apple.cn,DIRECT
+  - DOMAIN-SUFFIX,icloud.com,DIRECT
+  - DOMAIN-SUFFIX,icloud.com.cn,DIRECT
+  - DOMAIN-SUFFIX,me.com,DIRECT
+  - DOMAIN-SUFFIX,mzstatic.com,DIRECT
+  - DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
+  - DOMAIN-SUFFIX,icloud-content.com,DIRECT
+
+  # 其他国内常用
+  - DOMAIN-SUFFIX,cn.bing.com,DIRECT
+
+  # ===== 兜底规则 =====
   - RULE-SET,proxy,🎯 通用代理
-  
-  # 国内直连
   - RULE-SET,direct,DIRECT
   - GEOIP,CN,DIRECT
-  
-  # 其他走通用代理
   - MATCH,🎯 通用代理
