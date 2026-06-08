@@ -161,6 +161,19 @@ rules:
   - DOMAIN-SUFFIX,replika.ai,🤖 AI访问
   - DOMAIN-SUFFIX,poe.com,🤖 AI访问
   - DOMAIN-SUFFIX,jetbrains.ai,🤖 AI访问
+  - DOMAIN-SUFFIX,gemini.google.com,🤖 AI访问
+  - DOMAIN-SUFFIX,generativelanguage.googleapis.com,🤖 AI访问
+  - DOMAIN-SUFFIX,cursor.sh,🤖 AI访问
+  - DOMAIN-SUFFIX,cursor.com,🤖 AI访问
+  - DOMAIN-SUFFIX,suno.com,🤖 AI访问
+  - DOMAIN-SUFFIX,runwayml.com,🤖 AI访问
+  - DOMAIN-SUFFIX,elevenlabs.io,🤖 AI访问
+  - DOMAIN-SUFFIX,v0.dev,🤖 AI访问
+  - DOMAIN-SUFFIX,deepl.com,🤖 AI访问
+  - DOMAIN-SUFFIX,groq.com,🤖 AI访问
+  - DOMAIN-SUFFIX,mistral.ai,🤖 AI访问
+  - DOMAIN-SUFFIX,x.ai,🤖 AI访问
+  - DOMAIN-SUFFIX,grok.com,🤖 AI访问
   - DOMAIN-KEYWORD,copilot,🤖 AI访问
   - DOMAIN-KEYWORD,gemini,🤖 AI访问
 
@@ -191,6 +204,9 @@ rules:
   - DOMAIN-SUFFIX,pandora.com,🎬 流媒体
   - DOMAIN-SUFFIX,soundcloud.com,🎬 流媒体
   - DOMAIN-SUFFIX,tidal.com,🎬 流媒体
+  - DOMAIN-SUFFIX,deezer.com,🎬 流媒体
+  - DOMAIN-SUFFIX,iq.com,🎬 流媒体
+  - DOMAIN-SUFFIX,bilibili.tv,🎬 流媒体
 
   # ===== GitHub =====
   - DOMAIN-SUFFIX,github.com,🎯 通用代理
@@ -246,6 +262,15 @@ rules:
   - DOMAIN-SUFFIX,bethesda.net,🎮 游戏加速
   - DOMAIN-SUFFIX,minecraft.net,🎮 游戏加速
   - DOMAIN-SUFFIX,mojang.com,🎮 游戏加速
+  - DOMAIN-SUFFIX,square-enix.com,🎮 游戏加速
+  - DOMAIN-SUFFIX,sega.com,🎮 游戏加速
+  - DOMAIN-SUFFIX,bandainamcoent.com,🎮 游戏加速
+  - DOMAIN-SUFFIX,capcom.com,🎮 游戏加速
+  - DOMAIN-SUFFIX,cdprojektred.com,🎮 游戏加速
+  - DOMAIN-SUFFIX,nexon.com,🎮 游戏加速
+  - DOMAIN-SUFFIX,hoyoverse.com,🎮 游戏加速
+  - DOMAIN-SUFFIX,xboxlive.com,🎮 游戏加速
+  - DOMAIN-SUFFIX,xbox.live.com,🎮 游戏加速
 
   # ===== 国内服务直连 =====
 
