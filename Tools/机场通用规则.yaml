@@ -314,7 +314,7 @@ rules:
 
   # 其他国内常用
   - DOMAIN-SUFFIX,cn.bing.com,DIRECT
-
+  - DOMAIN-SUFFIX,zhongyibaike.com,DIRECT
   # ===== 兜底规则 =====
   - RULE-SET,proxy,🎯 通用代理
   - RULE-SET,direct,DIRECT
