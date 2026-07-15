@@ -31,101 +31,99 @@ rule-providers:
 # 自定义策略组配置
 proxy-groups:
   # ===== 服务策略组 =====
-  - name: "🎯 通用代理"
+  - name: "通用代理"
     type: select
     proxies:
-      - "🇭🇰 香港"
-      - "🇹🇼 台湾"
-      - "🇯🇵 日本"
-      - "🇰🇷 韩国"
-      - "🇸🇬 新加坡"
-      - "🇬🇧 英国"
-      - "🇺🇸 美国"
+      - "香港"
+      - "台湾"
+      - "日本"
+      - "韩国"
+      - "新加坡"
+      - "英国"
+      - "美国"
       - "DIRECT"
 
-  - name: "🤖 AI访问"
+  - name: "AI访问"
     type: select
     proxies:
-      - "🎯 通用代理"
-      - "🇭🇰 香港"
-      - "🇹🇼 台湾"
-      - "🇯🇵 日本"
-      - "🇰🇷 韩国"
-      - "🇸🇬 新加坡"
-      - "🇬🇧 英国"
-      - "🇺🇸 美国"
+      - "美国"
+      - "英国"
+      - "日本"
+      - "韩国"
+      - "台湾"
+      - "新加坡"
+      - "通用代理"
       - "DIRECT"
 
-  - name: "🎬 流媒体"
+  - name: "Apple 服务"
     type: select
     proxies:
-      - "🎯 通用代理"
-      - "🇭🇰 香港"
-      - "🇹🇼 台湾"
-      - "🇯🇵 日本"
-      - "🇰🇷 韩国"
-      - "🇸🇬 新加坡"
-      - "🇬🇧 英国"
-      - "🇺🇸 美国"
+      - "香港"
+      - "台湾"
+      - "日本"
+      - "韩国"
+      - "新加坡"
+      - "英国"
+      - "美国"
+      - "通用代理"
       - "DIRECT"
 
-  - name: "🎮 游戏加速"
+  - name: "支付钱包"
     type: select
     proxies:
-      - "🎯 通用代理"
-      - "🇭🇰 香港"
-      - "🇹🇼 台湾"
-      - "🇯🇵 日本"
-      - "🇰🇷 韩国"
-      - "🇸🇬 新加坡"
-      - "🇬🇧 英国"
-      - "🇺🇸 美国"
+      - "美国"
+      - "台湾"
+      - "日本"
+      - "韩国"
+      - "新加坡"
+      - "英国"
+      - "通用代理"
       - "DIRECT"
 
   # ===== 地区节点（自动筛选）=====
-  - name: "🇭🇰 香港"
+  - name: "香港"
     type: fallback
     include-all: true
     filter: "(?i)^(?!.*cn).*(港|hk|hongkong|hong.?kong)"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
-  - name: "🇹🇼 台湾"
+  - name: "台湾"
     type: fallback
     include-all: true
     filter: "(?i)^(?!.*cn).*(台湾|tw|taiwan)"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
-  - name: "🇯🇵 日本"
+  - name: "日本"
     type: fallback
     include-all: true
     filter: "(?i)^(?!.*cn).*(日本|jp|japan)"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
-  - name: "🇰🇷 韩国"
+  - name: "韩国"
     type: fallback
     include-all: true
     filter: "(?i)^(?!.*cn).*(韩国|kr|korea)"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
-  - name: "🇸🇬 新加坡"
+  - name: "新加坡"
     type: fallback
     include-all: true
-    filter: "(?i)^(?!.*cn).*(新加坡|sg|singapore)"
+    filter: "(?i)^(?!.*cn).*(新加坡|狮城|singapore|(^|[^a-z])(sg|sgp)([^a-z]|$))"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
-  - name: "🇬🇧 英国"
+  - name: "英国"
     type: fallback
     include-all: true
     filter: "(?i)^(?!.*cn).*(英国|uk|britain|united.?kingdom)"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
-  - name: "🇺🇸 美国"
+  - name: "美国"
     type: fallback
     include-all: true
     filter: "(?i)^(?!.*cn).*(美国|us|america|united.?states)"
@@ -142,82 +140,12 @@ rules:
   - RULE-SET,private,DIRECT
   - RULE-SET,reject,REJECT
 
-  # ===== AI 服务 =====
-  - DOMAIN-SUFFIX,claude.ai,🤖 AI访问
-  - DOMAIN-SUFFIX,claude.com,🤖 AI访问
-  - DOMAIN-SUFFIX,anthropic.com,🤖 AI访问
-  - DOMAIN-SUFFIX,claudeusercontent.com,🤖 AI访问
-  - DOMAIN-KEYWORD,claude,🤖 AI访问
-  - DOMAIN-KEYWORD,anthropic,🤖 AI访问
-  - DOMAIN-SUFFIX,openai.com,🤖 AI访问
-  - DOMAIN-SUFFIX,chatgpt.com,🤖 AI访问
-  - DOMAIN-SUFFIX,oaiusercontent.com,🤖 AI访问
-  - DOMAIN-SUFFIX,midjourney.com,🤖 AI访问
-  - DOMAIN-SUFFIX,stability.ai,🤖 AI访问
-  - DOMAIN-SUFFIX,huggingface.co,🤖 AI访问
-  - DOMAIN-SUFFIX,cohere.ai,🤖 AI访问
-  - DOMAIN-SUFFIX,perplexity.ai,🤖 AI访问
-  - DOMAIN-SUFFIX,character.ai,🤖 AI访问
-  - DOMAIN-SUFFIX,replika.ai,🤖 AI访问
-  - DOMAIN-SUFFIX,poe.com,🤖 AI访问
-  - DOMAIN-SUFFIX,jetbrains.ai,🤖 AI访问
-  - DOMAIN-SUFFIX,gemini.google.com,🤖 AI访问
-  - DOMAIN-SUFFIX,generativelanguage.googleapis.com,🤖 AI访问
-  - DOMAIN-SUFFIX,cursor.sh,🤖 AI访问
-  - DOMAIN-SUFFIX,cursor.com,🤖 AI访问
-  - DOMAIN-SUFFIX,suno.com,🤖 AI访问
-  - DOMAIN-SUFFIX,runwayml.com,🤖 AI访问
-  - DOMAIN-SUFFIX,elevenlabs.io,🤖 AI访问
-  - DOMAIN-SUFFIX,v0.dev,🤖 AI访问
-  - DOMAIN-SUFFIX,deepl.com,🤖 AI访问
-  - DOMAIN-SUFFIX,groq.com,🤖 AI访问
-  - DOMAIN-SUFFIX,mistral.ai,🤖 AI访问
-  - DOMAIN-SUFFIX,x.ai,🤖 AI访问
-  - DOMAIN-SUFFIX,grok.com,🤖 AI访问
-  - DOMAIN-KEYWORD,copilot,🤖 AI访问
-  - DOMAIN-KEYWORD,gemini,🤖 AI访问
+  # ===== 显式直连 =====
+  # 中国域名
+  - DOMAIN-SUFFIX,cn,DIRECT
 
-  # ===== 流媒体 =====
-  - DOMAIN-SUFFIX,tv.apple.com,🎬 流媒体
-  - DOMAIN-SUFFIX,netflix.com,🎬 流媒体
-  - DOMAIN-SUFFIX,nflxvideo.net,🎬 流媒体
-  - DOMAIN-SUFFIX,youtube.com,🎬 流媒体
-  - DOMAIN-SUFFIX,youtu.be,🎬 流媒体
-  - DOMAIN-SUFFIX,googlevideo.com,🎬 流媒体
-  - DOMAIN-SUFFIX,disney.com,🎬 流媒体
-  - DOMAIN-SUFFIX,disneyplus.com,🎬 流媒体
-  - DOMAIN-SUFFIX,spotify.com,🎬 流媒体
-  - DOMAIN-SUFFIX,hulu.com,🎬 流媒体
-  - DOMAIN-SUFFIX,primevideo.com,🎬 流媒体
-  - DOMAIN-SUFFIX,amazonvideo.com,🎬 流媒体
-  - DOMAIN-SUFFIX,hbomax.com,🎬 流媒体
-  - DOMAIN-SUFFIX,max.com,🎬 流媒体
-  - DOMAIN-SUFFIX,paramountplus.com,🎬 流媒体
-  - DOMAIN-SUFFIX,twitch.tv,🎬 流媒体
-  - DOMAIN-SUFFIX,crunchyroll.com,🎬 流媒体
-  - DOMAIN-SUFFIX,funimation.com,🎬 流媒体
-  - DOMAIN-SUFFIX,peacocktv.com,🎬 流媒体
-  - DOMAIN-SUFFIX,discoveryplus.com,🎬 流媒体
-  - DOMAIN-SUFFIX,espn.com,🎬 流媒体
-  - DOMAIN-SUFFIX,dailymotion.com,🎬 流媒体
-  - DOMAIN-SUFFIX,vimeo.com,🎬 流媒体
-  - DOMAIN-SUFFIX,pandora.com,🎬 流媒体
-  - DOMAIN-SUFFIX,soundcloud.com,🎬 流媒体
-  - DOMAIN-SUFFIX,tidal.com,🎬 流媒体
-  - DOMAIN-SUFFIX,deezer.com,🎬 流媒体
-  - DOMAIN-SUFFIX,iq.com,🎬 流媒体
-  - DOMAIN-SUFFIX,bilibili.tv,🎬 流媒体
-
-  # ===== GitHub =====
-  - DOMAIN-SUFFIX,github.com,🎯 通用代理
-  - DOMAIN-SUFFIX,githubusercontent.com,🎯 通用代理
-  - DOMAIN-SUFFIX,githubassets.com,🎯 通用代理
-  - DOMAIN-SUFFIX,github-cloud.s3.amazonaws.com,🎯 通用代理
-  - DOMAIN-SUFFIX,githubstatus.com,🎯 通用代理
-
-  # ===== 游戏 =====
-
-  # 游戏下载直连（必须在游戏服务代理规则前）
+  # ===== 游戏下载直连 =====
+  # 仅下载/CDN 直连，游戏商店、登录和社区仍由通用规则处理
   - DOMAIN,steamcdn-a.akamaihd.net,DIRECT
   - DOMAIN-SUFFIX,steamserver.net,DIRECT
   - DOMAIN-SUFFIX,steamcontent.com,DIRECT
@@ -235,73 +163,9 @@ rules:
   - DOMAIN-SUFFIX,gamedownloads-rockstargames-com.akamaized.net,DIRECT
   - DOMAIN-KEYWORD,gamedownload,DIRECT
 
-  # 游戏服务（登录/商店/社区）
-  - DOMAIN-SUFFIX,steampowered.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,steamcommunity.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,epicgames.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,unrealengine.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,battle.net,🎮 游戏加速
-  - DOMAIN-SUFFIX,blizzard.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,riotgames.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,ea.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,origin.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,ubisoft.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,uplay.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,gog.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,playstation.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,xbox.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,nintendo.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,valve.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,valvesoftware.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,activision.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,rockstargames.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,2k.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,bethesda.net,🎮 游戏加速
-  - DOMAIN-SUFFIX,minecraft.net,🎮 游戏加速
-  - DOMAIN-SUFFIX,mojang.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,square-enix.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,sega.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,bandainamcoent.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,capcom.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,cdprojektred.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,nexon.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,hoyoverse.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,xboxlive.com,🎮 游戏加速
-  - DOMAIN-SUFFIX,xbox.live.com,🎮 游戏加速
-
   # ===== 国内服务直连 =====
 
-  # Apple/iCloud（国区 Apple ID 需直连）
-  - DOMAIN-SUFFIX,apple.com,DIRECT
-  - DOMAIN-SUFFIX,apple.cn,DIRECT
-  - DOMAIN-SUFFIX,icloud.com,DIRECT
-  - DOMAIN-SUFFIX,icloud.com.cn,DIRECT
-  - DOMAIN-SUFFIX,me.com,DIRECT
-  - DOMAIN-SUFFIX,mzstatic.com,DIRECT
-  - DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
-  - DOMAIN-SUFFIX,icloud-content.com,DIRECT
-
-  # 银行
-  - DOMAIN-SUFFIX,icbc.com.cn,DIRECT
-  - DOMAIN-SUFFIX,ccb.com,DIRECT
-  - DOMAIN-SUFFIX,ccb.com.cn,DIRECT
-  - DOMAIN-SUFFIX,abchina.com,DIRECT
-  - DOMAIN-SUFFIX,abchina.com.cn,DIRECT
-  - DOMAIN-SUFFIX,boc.cn,DIRECT
-  - DOMAIN-SUFFIX,bankcomm.com,DIRECT
-  - DOMAIN-SUFFIX,cmbchina.com,DIRECT
-  - DOMAIN-SUFFIX,citicbank.com,DIRECT
-  - DOMAIN-SUFFIX,cebbank.com,DIRECT
-  - DOMAIN-SUFFIX,cmbc.com.cn,DIRECT
-  - DOMAIN-SUFFIX,pingan.com,DIRECT
-  - DOMAIN-SUFFIX,pingan.com.cn,DIRECT
-  - DOMAIN-SUFFIX,spdb.com.cn,DIRECT
-  - DOMAIN-SUFFIX,cib.com.cn,DIRECT
-  - DOMAIN-SUFFIX,hxb.com.cn,DIRECT
-  - DOMAIN-SUFFIX,cgbchina.com.cn,DIRECT
-  - DOMAIN-SUFFIX,psbc.com,DIRECT
-
-  # 支付
+  # 国内支付
   - DOMAIN-SUFFIX,alipay.com,DIRECT
   - DOMAIN-SUFFIX,alipayobjects.com,DIRECT
   - DOMAIN-SUFFIX,unionpay.com,DIRECT
@@ -315,8 +179,74 @@ rules:
   # 其他国内常用
   - DOMAIN-SUFFIX,cn.bing.com,DIRECT
 
-  # ===== 兜底规则 =====
-  - RULE-SET,proxy,🎯 通用代理
+  # ===== AI 服务 =====
+  - DOMAIN-SUFFIX,claude.ai,AI访问
+  - DOMAIN-SUFFIX,claude.com,AI访问
+  - DOMAIN-SUFFIX,anthropic.com,AI访问
+  - DOMAIN-SUFFIX,claudeusercontent.com,AI访问
+  - DOMAIN-KEYWORD,claude,AI访问
+  - DOMAIN-KEYWORD,anthropic,AI访问
+  - DOMAIN-SUFFIX,openai.com,AI访问
+  - DOMAIN-SUFFIX,chatgpt.com,AI访问
+  - DOMAIN-SUFFIX,oaiusercontent.com,AI访问
+  - DOMAIN-SUFFIX,midjourney.com,AI访问
+  - DOMAIN-SUFFIX,stability.ai,AI访问
+  - DOMAIN-SUFFIX,huggingface.co,AI访问
+  - DOMAIN-SUFFIX,cohere.ai,AI访问
+  - DOMAIN-SUFFIX,perplexity.ai,AI访问
+  - DOMAIN-SUFFIX,character.ai,AI访问
+  - DOMAIN-SUFFIX,replika.ai,AI访问
+  - DOMAIN-SUFFIX,poe.com,AI访问
+  - DOMAIN-SUFFIX,jetbrains.ai,AI访问
+  - DOMAIN-SUFFIX,gemini.google.com,AI访问
+  - DOMAIN-SUFFIX,generativelanguage.googleapis.com,AI访问
+  - DOMAIN-SUFFIX,cursor.sh,AI访问
+  - DOMAIN-SUFFIX,cursor.com,AI访问
+  - DOMAIN-SUFFIX,suno.com,AI访问
+  - DOMAIN-SUFFIX,runwayml.com,AI访问
+  - DOMAIN-SUFFIX,elevenlabs.io,AI访问
+  - DOMAIN-SUFFIX,v0.dev,AI访问
+  - DOMAIN-SUFFIX,deepl.com,AI访问
+  - DOMAIN-SUFFIX,groq.com,AI访问
+  - DOMAIN-SUFFIX,mistral.ai,AI访问
+  - DOMAIN-SUFFIX,x.ai,AI访问
+  - DOMAIN-SUFFIX,grok.com,AI访问
+  - DOMAIN-KEYWORD,copilot,AI访问
+  - DOMAIN-KEYWORD,gemini,AI访问
+
+  # Apple Pay 需放在 Apple 服务规则之前
+  - DOMAIN-KEYWORD,apple-pay,支付钱包
+  - DOMAIN-KEYWORD,applepay,支付钱包
+
+  # ===== Apple 服务（国区 Apple ID 默认直连，可手动切换地区）=====
+  - DOMAIN-SUFFIX,apple.com,Apple 服务
+  - DOMAIN-SUFFIX,icloud.com,Apple 服务
+  - DOMAIN-SUFFIX,me.com,Apple 服务
+  - DOMAIN-SUFFIX,mzstatic.com,Apple 服务
+  - DOMAIN-SUFFIX,aaplimg.com,Apple 服务
+  - DOMAIN-SUFFIX,apple-cloudkit.com,Apple 服务
+  - DOMAIN-SUFFIX,apple-dns.net,Apple 服务
+  - DOMAIN-SUFFIX,apple-mapkit.com,Apple 服务
+  - DOMAIN-SUFFIX,cdn-apple.com,Apple 服务
+  - DOMAIN-SUFFIX,icloud-content.com,Apple 服务
+
+  # ===== 支付钱包（美国节点优先）=====
+  - DOMAIN-SUFFIX,paypal.com,支付钱包
+  - DOMAIN-SUFFIX,paypalobjects.com,支付钱包
+  - DOMAIN,pay.google.com,支付钱包
+  - DOMAIN,payments.google.com,支付钱包
+  - DOMAIN,wallet.google.com,支付钱包
+  - DOMAIN-SUFFIX,googlepay.com,支付钱包
+  - DOMAIN-SUFFIX,wise.com,支付钱包
+  - DOMAIN-SUFFIX,transferwise.com,支付钱包
+  - DOMAIN-SUFFIX,payoneer.com,支付钱包
+  - DOMAIN-SUFFIX,stripe.com,支付钱包
+  - DOMAIN-SUFFIX,stripe.network,支付钱包
+  - DOMAIN-SUFFIX,revolut.com,支付钱包
+  - DOMAIN-SUFFIX,skrill.com,支付钱包
+
+  # ===== 在线规则与兜底 =====
   - RULE-SET,direct,DIRECT
+  - RULE-SET,proxy,通用代理
   - GEOIP,CN,DIRECT
-  - MATCH,🎯 通用代理
+  - MATCH,通用代理
