@@ -145,6 +145,7 @@ rules:
   # ===== 显式直连 =====
   # 中国域名
   - DOMAIN-SUFFIX,cn,DIRECT
+  - DOMAIN-SUFFIX,zhongyibaike.com,DIRECT
 
   # ===== 游戏下载直连 =====
   # 仅下载/CDN 直连，游戏商店、登录和社区仍由通用规则处理
