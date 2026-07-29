@@ -24,7 +24,7 @@
 - 资产迁移 / 项目清理
 - 游戏开发技术咨询
 
-如有合作意向，欢迎通过 ✉️ mengzhishanghun@outlook.com 与我联系
+如有合作或交流意向，欢迎访问 [联系方式页面](https://mengzhishanghun.github.io/mengzhishanghun/contact/)。
 
 ---
 
