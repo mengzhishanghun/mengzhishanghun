@@ -163,6 +163,11 @@ rules:
   - DOMAIN-SUFFIX,gamedownloads-rockstargames-com.akamaized.net,DIRECT
   - DOMAIN-KEYWORD,gamedownload,DIRECT
 
+  # ===== Spotify 音频 CDN 直连 =====
+  # 仅大流量静态资源直连，登录、网页和 API 仍由通用规则处理
+  - DOMAIN-SUFFIX,spotifycdn.com,DIRECT
+  - DOMAIN-SUFFIX,scdn.co,DIRECT
+
   # ===== AI 服务 =====
   - DOMAIN-SUFFIX,claude.ai,AI访问
   - DOMAIN-SUFFIX,claude.com,AI访问
