@@ -1,0 +1,6 @@
+Tools/机场通用规则.yaml text eol=lf
+Tools/机场通用规则.conf text eol=lf
+Tools/Scripts/*.py text eol=lf
+Tools/Tests/*.py text eol=lf
+Tools/requirements-ci.txt text eol=lf
+.github/workflows/ValidateAirportRules.yml text eol=lf

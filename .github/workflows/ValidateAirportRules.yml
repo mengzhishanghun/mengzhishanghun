@@ -1,0 +1,44 @@
+name: Validate Airport Rules
+
+on:
+  workflow_dispatch: {}
+  push:
+    paths:
+      - "Tools/机场通用规则.yaml"
+      - "Tools/机场通用规则.conf"
+      - "Tools/Scripts/GenerateAirportRules.py"
+      - "Tools/Tests/**"
+      - "Tools/requirements-ci.txt"
+      - ".github/workflows/ValidateAirportRules.yml"
+  pull_request:
+    paths:
+      - "Tools/机场通用规则.yaml"
+      - "Tools/机场通用规则.conf"
+      - "Tools/Scripts/GenerateAirportRules.py"
+      - "Tools/Tests/**"
+      - "Tools/requirements-ci.txt"
+      - ".github/workflows/ValidateAirportRules.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependency
+        run: pip install -r Tools/requirements-ci.txt
+
+      - name: Run tests
+        run: python -m unittest discover -s Tools/Tests -p "Test*.py" -v
+
+      - name: Verify generated Shadowrocket config
+        run: python Tools/Scripts/GenerateAirportRules.py --check
