@@ -52,7 +52,7 @@
 | [AutoPYVideos](https://github.com/MZSH-Tools/AutoPYVideos) | 一个一键油管视频自动搬运并翻译工具，全自动后台处理版 | Python | 1 | 2026-07-11 |
 | [PySentinel](https://github.com/MZSH-Tools/PySentinel) | 自用加壳软件，离线激活+本机绑定，生成有时间限制的密钥，防止被恶意复制转发 | Python | 1 | 2026-06-04 |
 | [MDBlogPacker](https://github.com/MZSH-Tools/MDBlogPacker) | 发博客效率工具：Markdown 本地图片转 Base64 内嵌，一键复制到剪贴板，直接发博客园/CSDN/掘金等平台 | Python | 1 | 2026-05-13 |
-| [ImagePartSplitter](https://github.com/MZSH-Tools/ImagePartSplitter) | 用户自备蒙版的通用图片部件校验与拆分命令行工具 | Python | 0 | 2026-08-27 |
+| [ImagePartSplitter](https://github.com/MZSH-Tools/ImagePartSplitter) | 用户自备蒙版的通用图片部件校验与拆分命令行工具 | Python | 0 | 2026-08-29 |
 | [UEPluginManager](https://github.com/MZSH-Tools/UEPluginManager) | UE插件管理工具 | Python | 0 | 2026-08-20 |
 | [UEPluginAutoPacker](https://github.com/MZSH-Tools/UEPluginAutoPacker) | UE插件多版本自动打包，协助自动化实现Fab要求 | Python | 0 | 2026-08-08 |
 | [P4StreamSwitcher](https://github.com/MZSH-Tools/P4StreamSwitcher) | P4流工作区快捷切换工具，自用，仅支持二层深度流切换，以达到一个工作区控制多个文件夹的目的 | Python | 0 | 2026-07-11 |
