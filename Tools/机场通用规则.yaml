@@ -147,6 +147,11 @@ rules:
   - DOMAIN-SUFFIX,cn,DIRECT
   - DOMAIN-SUFFIX,zhongyibaike.com,DIRECT
 
+  # 贝锐全产品（向日葵、蒲公英、花生壳等）
+  - DOMAIN-SUFFIX,oray.com,DIRECT
+  - DOMAIN-SUFFIX,oray.net,DIRECT
+  - DOMAIN-SUFFIX,orayimg.com,DIRECT
+
   # ===== 游戏下载直连 =====
   # 仅下载/CDN 直连，游戏商店、登录和社区仍由通用规则处理
   - DOMAIN,steamcdn-a.akamaihd.net,DIRECT
