@@ -143,6 +143,8 @@ rules:
   - RULE-SET,reject,REJECT
 
   # ===== 显式直连 =====
+  - DOMAIN-SUFFIX,civitai.me,DIRECT
+
   # 中国域名
   - DOMAIN-SUFFIX,cn,DIRECT
   - DOMAIN-SUFFIX,zhongyibaike.com,DIRECT
