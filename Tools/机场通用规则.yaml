@@ -238,6 +238,9 @@ rules:
   - DOMAIN-SUFFIX,payoneer.com,支付钱包
   - DOMAIN-SUFFIX,stripe.com,支付钱包
   - DOMAIN-SUFFIX,stripe.network,支付钱包
+  - DOMAIN-SUFFIX,stripecdn.com,支付钱包
+  - DOMAIN-SUFFIX,stripeassets.com,支付钱包
+  - DOMAIN-SUFFIX,link.com,支付钱包
   - DOMAIN-SUFFIX,revolut.com,支付钱包
   - DOMAIN-SUFFIX,skrill.com,支付钱包
 
