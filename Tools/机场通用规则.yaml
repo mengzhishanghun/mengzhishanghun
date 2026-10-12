@@ -145,6 +145,18 @@ rules:
   # ===== 显式直连 =====
   - DOMAIN-SUFFIX,civitai.me,DIRECT
 
+  # ===== Unreal Engine / Epic Games / Fab 直连 =====
+  # 官网、文档、登录、商城与资源下载均直连
+  - DOMAIN-SUFFIX,unrealengine.com,DIRECT
+  - DOMAIN-SUFFIX,epicgames.com,DIRECT
+  - DOMAIN-SUFFIX,epicgames.dev,DIRECT
+  - DOMAIN-SUFFIX,epicgamescdn.com,DIRECT
+  - DOMAIN-SUFFIX,fab.com,DIRECT
+  - DOMAIN-SUFFIX,quixel.com,DIRECT
+  - DOMAIN-SUFFIX,quixel.se,DIRECT
+  - DOMAIN,egdownload.fastly-edge.com,DIRECT
+  - DOMAIN-KEYWORD,epicgames-download,DIRECT
+
   # 中国域名
   - DOMAIN-SUFFIX,cn,DIRECT
   - DOMAIN-SUFFIX,zhongyibaike.com,DIRECT
@@ -161,8 +173,6 @@ rules:
   - DOMAIN-SUFFIX,steamcontent.com,DIRECT
   - DOMAIN-SUFFIX,steamusercontent.com,DIRECT
   - DOMAIN-SUFFIX,steamstatic.com,DIRECT
-  - DOMAIN-KEYWORD,epicgames-download,DIRECT
-  - DOMAIN-SUFFIX,fab.com,DIRECT
   - DOMAIN-SUFFIX,ssl-lvlt.cdn.ea.com,DIRECT
   - DOMAIN-SUFFIX,origin-a.akamaihd.net,DIRECT
   - DOMAIN-SUFFIX,level3.blizzard.com,DIRECT
