@@ -41,7 +41,6 @@ proxy-groups:
       - "新加坡"
       - "英国"
       - "美国"
-      - "DIRECT"
 
   - name: "AI访问"
     type: select
@@ -54,7 +53,6 @@ proxy-groups:
       - "英国"
       - "美国"
       - "通用代理"
-      - "DIRECT"
 
   - name: "Apple 服务"
     type: select
@@ -67,7 +65,6 @@ proxy-groups:
       - "英国"
       - "美国"
       - "通用代理"
-      - "DIRECT"
 
   - name: "支付钱包"
     type: select
@@ -80,7 +77,6 @@ proxy-groups:
       - "英国"
       - "美国"
       - "通用代理"
-      - "DIRECT"
 
   # ===== 地区节点（自动筛选）=====
   - name: "香港"
@@ -224,7 +220,7 @@ rules:
   - DOMAIN-KEYWORD,apple-pay,支付钱包
   - DOMAIN-KEYWORD,applepay,支付钱包
 
-  # ===== Apple 服务（国区 Apple ID 默认直连，可手动切换地区）=====
+  # ===== Apple 服务（通过策略组选择代理地区）=====
   - DOMAIN-SUFFIX,apple.com,Apple 服务
   - DOMAIN-SUFFIX,icloud.com,Apple 服务
   - DOMAIN-SUFFIX,me.com,Apple 服务
