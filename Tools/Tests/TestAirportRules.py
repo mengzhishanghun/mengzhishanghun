@@ -45,7 +45,7 @@ class AirportRulesTests(unittest.TestCase):
         self.assertNotIn("MATCH,", Generated)
         self.assertNotIn("rule-providers:", Generated)
         self.assertNotIn("payload:", Generated)
-        self.assertEqual(Stats["remote_rule_count"], 4)
+        self.assertEqual(Stats["remote_rule_count"], 5)
 
     def test_changed_region_filter_is_rejected(self) -> None:
         Data = copy.deepcopy(self.Data)
@@ -53,6 +53,26 @@ class AirportRulesTests(unittest.TestCase):
         Region["filter"] += "|测试"
         with self.assertRaisesRegex(ValueError, "YAML filter 已变化"):
             MODULE.BuildText(Data, self.SourceDigest)
+
+    def test_domestic_rule_expands_with_original_policy_and_order(self) -> None:
+        Data = copy.deepcopy(self.Data)
+        Data["rules"] = [
+            "RULE-SET,direct,REJECT",
+            "RULE-SET,proxy,通用代理",
+            "MATCH,通用代理",
+        ]
+        Generated, Stats = MODULE.BuildText(Data, self.SourceDigest)
+        RuleLines = Generated.split("[Rule]\n", 1)[1].splitlines()
+        self.assertEqual(
+            RuleLines,
+            [
+                "DOMAIN-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/ChinaMax_Domain.list,REJECT",
+                "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/ChinaMax.list,REJECT",
+                "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Proxy/Proxy.list,通用代理",
+                "FINAL,通用代理",
+            ],
+        )
+        self.assertEqual(Stats["remote_rule_count"], 3)
 
     def test_unknown_provider_is_rejected(self) -> None:
         Data = copy.deepcopy(self.Data)
@@ -86,6 +106,14 @@ class AirportRulesTests(unittest.TestCase):
         self.assertFalse(MODULE.IsSynchronized(GeneratedBytes.replace(b"\n", b"\r\n"), GeneratedBytes))
         self.assertNotIn(b"\r\n", GeneratedBytes)
         self.assertFalse(GeneratedBytes.startswith(b"\xef\xbb\xbf"))
+
+    def test_untrusted_shadowrocket_domain_url_is_rejected(self) -> None:
+        with patch.dict(
+            MODULE.SHADOWROCKET_DOMAIN_URLS,
+            {"direct": "https://example.com/domains.list"},
+        ):
+            with self.assertRaisesRegex(ValueError, "URL 不受信"):
+                MODULE.BuildText(self.Data, self.SourceDigest)
 
 
 if __name__ == "__main__":

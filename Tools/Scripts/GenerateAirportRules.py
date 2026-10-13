@@ -55,6 +55,10 @@ SHADOWROCKET_RULE_URLS = {
     "proxy": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Proxy/Proxy.list",
 }
 
+SHADOWROCKET_DOMAIN_URLS = {
+    "direct": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/ChinaMax_Domain.list",
+}
+
 GENERAL_LINES = [
     "[General]",
     "# 本配置不包含节点或订阅 Token。请先在 Shadowrocket 首页添加机场订阅。",
@@ -76,18 +80,23 @@ def ValidateAdapters(Providers: dict) -> None:
         raise ValueError(
             f"规则集适配表不同步：YAML={sorted(Providers)} / Shadowrocket={sorted(SHADOWROCKET_RULE_URLS)}"
         )
+    if not set(SHADOWROCKET_DOMAIN_URLS).issubset(Providers):
+        raise ValueError("域名集适配表引用了不存在的源规则集")
     for Name, Provider in Providers.items():
         if not isinstance(Provider, dict) or Provider.get("type") != "http" or Provider.get("behavior") != "domain":
             raise ValueError(f"规则集 {Name} 的 type/behavior 已变化，必须重新评估 Shadowrocket 映射")
-        Url = SHADOWROCKET_RULE_URLS[Name]
-        Parts = urlsplit(Url)
-        if (
-            Parts.scheme != "https"
-            or Parts.hostname != "raw.githubusercontent.com"
-            or "/rule/Shadowrocket/" not in Parts.path
-            or not Parts.path.endswith(".list")
-        ):
-            raise ValueError(f"规则集 {Name} 的 Shadowrocket URL 不受信：{Url}")
+        Urls = [SHADOWROCKET_RULE_URLS[Name]]
+        if Name in SHADOWROCKET_DOMAIN_URLS:
+            Urls.append(SHADOWROCKET_DOMAIN_URLS[Name])
+        for Url in Urls:
+            Parts = urlsplit(Url)
+            if (
+                Parts.scheme != "https"
+                or Parts.hostname != "raw.githubusercontent.com"
+                or "/rule/Shadowrocket/" not in Parts.path
+                or not Parts.path.endswith(".list")
+            ):
+                raise ValueError(f"规则集 {Name} 的 Shadowrocket URL 不受信：{Url}")
 
 
 def BuildText(Data: dict, SourceDigest: str) -> tuple[str, dict[str, int]]:
@@ -149,6 +158,10 @@ def BuildText(Data: dict, SourceDigest: str) -> tuple[str, dict[str, int]]:
             ShadowrocketUrl = SHADOWROCKET_RULE_URLS.get(ProviderName)
             if not ShadowrocketUrl:
                 raise ValueError(f"规则集 {ProviderName} 缺少 Shadowrocket 原生 URL")
+            DomainUrl = SHADOWROCKET_DOMAIN_URLS.get(ProviderName)
+            if DomainUrl:
+                Lines.append(",".join(["DOMAIN-SET", DomainUrl, *Parts[2:]]))
+                RemoteRuleCount += 1
             Parts[1] = ShadowrocketUrl
             RemoteRuleCount += 1
         elif Parts[0] == "MATCH":
