@@ -1,62 +1,29 @@
-<h1 align="center">Hi, I'm mengzhishanghun</h1>
-<h3 align="center">一个专注于Unreal Engine插件开发的独立开发者</h3>
-<p align="center"><i>"所有复杂，皆可封装；所有重复，皆可自动化"</i></p>
+# 你好，我是 MZSH（梦之殇魂）
+
+独立开发者 · Unreal Engine · C++ · Python
+
+从事游戏开发、数字孪生、VR 交互、数字人与 AI 交互，以及驾驶、飞行等仿真系统开发。
+
+也开发 UE 插件、开发工具与自动化流程。
+
+*所有复杂，皆可封装；所有重复，皆可自动化。*
+
+### [在 mzsh.me 查看我的作品、案例与文章](https://mzsh.me/zh/)
+
+[开发合作与交流](https://mzsh.me/zh/contact/) · [支持我的工作](https://github.com/sponsors/mengzhishanghun)
 
 ---
 
-# 💼 承接项目
+# Hi, I'm MZSH
 
-🏠 居家办公，承接外包项目
+Independent developer · Unreal Engine · C++ · Python
 
-**插件 & 工具**
-- UE 插件定制开发
-- UE 编辑器工具开发
-- UE 工作流自动化
-- Python 脚本 / 工具开发
+My work covers game development, digital twins, VR, digital humans and AI interaction, and simulation systems such as driving and flight simulators.
 
-**引擎 & 源码**
-- UE 项目引擎升级
-- UE 源码修改 / 功能定制
-- 蓝图转 C++ 优化
+I also develop Unreal Engine plugins, developer tools, and workflow automation.
 
-**工程 & 流程**
-- 构建流水线 / CI 搭建
-- 资产迁移 / 项目清理
-- 游戏开发技术咨询
+*All complexity can be encapsulated; all repetition can be automated.*
 
-如有合作或交流意向，欢迎访问 [联系方式页面](https://mengzhishanghun.github.io/contact/)。
+### [Explore my work, case studies, and articles at mzsh.me](https://mzsh.me/en/)
 
----
-
-# 🎨 作品展示
-
-## 📝 技术博客
-
-前往 [博客园](https://www.cnblogs.com/mengzhishanghun) 查看我的技术文章
-
-## 🛒 在售插件
-
-前往 [Fab商店](https://www.fab.com/search?q=mengzhishanghun) 查看我的 UE 插件
-
-## ☕ 支持作者
-
-如果我的项目对你有帮助，欢迎前往 [捐赠页面](https://mengzhishanghun.github.io/.github/) 请我喝杯咖啡
-
-## 🚀 开源作品
-
-<!-- REPO_LIST:START -->
-| 项目名 | 描述 | 语言 | ⭐ Stars | 最近更新 |
-| :-- | :-- | :-- | --: | :-- |
-| [MDImageEmbed](https://github.com/MZSH-ObsidianPlugins/MDImageEmbed) | 为了方便发博客写的，一个Obsidian插件，将MD文件导出到粘贴板或者存放为新文件，本地图片链接自动转换为Base64 | JavaScript | 2 | 2026-04-14 |
-| [UEQuickStart](https://github.com/MZSH-Tools/UEQuickStart) | 一键快速编译 Unreal Engine 项目的 GUI 工具 | Python | 1 | 2026-07-11 |
-| [PySentinel](https://github.com/MZSH-Tools/PySentinel) | 自用加壳软件，离线激活+本机绑定，生成有时间限制的密钥，防止被恶意复制转发 | Python | 1 | 2026-06-04 |
-| [MDBlogPacker](https://github.com/MZSH-Tools/MDBlogPacker) | 发博客效率工具：Markdown 本地图片转 Base64 内嵌，一键复制到剪贴板，直接发博客园/CSDN/掘金等平台 | Python | 1 | 2026-05-13 |
-| [UEPackageManager](https://github.com/MZSH-Tools/UEPackageManager) | 通用Unreal Engine项目打包与附加文件部署工具 | Python | 0 | 2026-09-18 |
-| [UEPluginManager](https://github.com/MZSH-Tools/UEPluginManager) | UE插件管理工具 | Python | 0 | 2026-08-20 |
-| [UEPluginAutoPacker](https://github.com/MZSH-Tools/UEPluginAutoPacker) | UE插件多版本自动打包，协助自动化实现Fab要求 | Python | 0 | 2026-08-08 |
-| [P4StreamSwitcher](https://github.com/MZSH-Tools/P4StreamSwitcher) | P4流工作区快捷切换工具，自用，仅支持二层深度流切换，以达到一个工作区控制多个文件夹的目的 | Python | 0 | 2026-07-11 |
-| [CustomKeyEcho](https://github.com/MZSH-Tools/CustomKeyEcho) | 为了打游戏方便写的自定义按键回声，用来代替鼠标宏 | Python | 0 | 2026-07-11 |
-| [SimpleFileUpdater](https://github.com/MZSH-Tools/SimpleFileUpdater) | 一个简单的文件更新器 | Python | 0 | 2026-04-18 |
-| [DirDiffSync](https://github.com/MZSH-Tools/DirDiffSync) | 项目比对同步工具，自动删除多余文件，更新修改文件，添加新增文件 | Python | 0 | 2026-01-06 |
-| [P4CaseSync](https://github.com/MZSH-Tools/P4CaseSync) | 不同系统使用p4时可能会出现新建文件提交自动小写的问题，该插件保证p4提交与本地文件名完全一致，防止提交时被自动改成小写的问题 | Python | 0 | 2025-10-16 |
-<!-- REPO_LIST:END -->
+[Get in touch](https://mzsh.me/en/contact/) · [Support my work](https://github.com/sponsors/mengzhishanghun)
